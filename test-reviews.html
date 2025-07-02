@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Persistence Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-step {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+        .important {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Review Persistence Test</h1>
+    <p>This test verifies that reviews persist across different login sessions.</p>
+    
+    <div class="test-step important">
+        <h3>📋 Test Steps:</h3>
+        <ol>
+            <li><strong>Login</strong> to your website with any user account</li>
+            <li><strong>Navigate</strong> to any restaurant menu</li>
+            <li><strong>Click</strong> on any menu item to open the product modal</li>
+            <li><strong>Submit a review</strong> with rating and text</li>
+            <li><strong>Logout</strong> from the website</li>
+            <li><strong>Login again</strong> with the same or different account</li>
+            <li><strong>Navigate</strong> to the same menu item</li>
+            <li><strong>Verify</strong> that your review is still visible</li>
+        </ol>
+    </div>
+    
+    <div class="test-step success">
+        <h3>✅ Expected Results:</h3>
+        <ul>
+            <li>✅ Review should be saved to the database</li>
+            <li>✅ Review should be visible after logout and login</li>
+            <li>✅ Review should show the correct username</li>
+            <li>✅ Review should show the correct rating (stars)</li>
+            <li>✅ Review should show the correct date</li>
+            <li>✅ Average rating should update correctly</li>
+        </ul>
+    </div>
+    
+    <div class="test-step">
+        <h3>🔧 Technical Details:</h3>
+        <ul>
+            <li><strong>Database Storage:</strong> Reviews are stored in PostgreSQL database</li>
+            <li><strong>API Endpoints:</strong> 
+                <ul>
+                    <li>POST /api/reviews - Submit a review</li>
+                    <li>GET /api/reviews/:productId - Get reviews for a product</li>
+                </ul>
+            </li>
+            <li><strong>Authentication:</strong> Reviews require user login (JWT token)</li>
+            <li><strong>Persistence:</strong> Reviews are loaded from database on each page load</li>
+        </ul>
+    </div>
+    
+    <div class="test-step">
+        <h3>🚀 Start Testing:</h3>
+        <p>Click the link below to start testing:</p>
+        <a href="http://localhost:3000" target="_blank" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Open Website</a>
+    </div>
+    
+    <div class="test-step">
+        <h3>🐛 Troubleshooting:</h3>
+        <ul>
+            <li><strong>Reviews not showing:</strong> Check browser console for errors</li>
+            <li><strong>Server errors:</strong> Check server console for database errors</li>
+            <li><strong>Login issues:</strong> Make sure you're logged in before submitting reviews</li>
+            <li><strong>Database issues:</strong> Check if PostgreSQL is running</li>
+        </ul>
+    </div>
+    
+    <script>
+        console.log('Review persistence test page loaded');
+        console.log('Follow the test steps to verify review persistence');
+    </script>
+</body>
+</html> 
