@@ -850,14 +850,8 @@ header {
     width: 100%;
 }
 
-.login-form {
-    display: none;
-    animation: slideInRight 0.5s ease;
-}
-
-.login-form.active {
-    display: block;
-}
+.login-form { display: none; }
+.login-form.active { display: block; }
 
 .login-form input {
     width: 100%;

@@ -1,6 +1,6 @@
 // Global function to open login modal
 function openLoginModal() {
-    console.log('Opening login modal');
+    const loginModal = document.getElementById('loginModal');
     if (loginModal) {
         loginModal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -10,11 +10,9 @@ function openLoginModal() {
 // Function to close login modal
 function closeLoginModal() {
     const loginModal = document.getElementById('loginModal');
-    
     if (loginModal) {
         loginModal.classList.remove('active');
         document.body.style.overflow = '';
-        console.log('✅ Login modal closed');
     }
 }
 
@@ -125,15 +123,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Check credentials locally (same as phone login)
-            if (email === 'prasannadasari006@gmail.com' && password === 'Devi1413') {
-                console.log('✅ Email login successful');
-                handleSuccessfulLogin();
-                
-                // Clear form
+            // Check credentials against localStorage userData
+            const user = JSON.parse(localStorage.getItem('userData') || '{}');
+            if (user && user.email === email && user.password === password) {
+                currentUser = user;
+                isLoggedIn = true;
+                updateLoginState();
+                checkLoginStatusAndUpdateUI();
+                showNotification('Login successful!');
+                loginModal.classList.remove('active');
+                document.body.style.overflow = '';
+                displayRestaurants();
+                initializeFeatures();
                 emailLoginForm.reset();
             } else {
-                console.log('❌ Email login failed - Invalid credentials');
                 showNotification('Invalid email or password');
                 emailLoginForm.querySelector('input[type="password"]').value = '';
             }
@@ -1439,6 +1442,70 @@ const loginForms = document.querySelectorAll('.login-form');
 const emailLoginForm = document.getElementById('emailLoginForm');
 const phoneLoginForm = document.getElementById('phoneLoginForm');
 const sendOtpBtn = document.querySelector('.send-otp');
+
+const signupForm= document.getElementById('signupForm');
+const signupLinks = document.querySelectorAll('.signup-link');
+const loginLinks = document.querySelectorAll('.login-link');
+
+// Show signup form
+signupLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginForms.forEach(form => form.classList.remove('active'));
+        signupForm.classList.add('active');
+        tabBtns.forEach(btn => btn.classList.remove('active'));
+    });
+});
+
+// Show login form
+loginLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        signupForm.classList.remove('active');
+        document.getElementById('emailLoginForm').classList.add('active');
+        tabBtns[0].classList.add('active');
+    });
+});
+
+// Handle signup form submission
+signupForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = signupForm.querySelector('button[type="submit"]');
+    const password = signupForm.querySelector('input[type="password"]').value;
+    const confirmPassword = signupForm.querySelectorAll('input[type="password"]')[1].value;
+    
+    // Validate passwords match
+    if (password !== confirmPassword) {
+        showNotification('Passwords do not match!');
+        return;
+    }
+    
+    // Show loading state
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+   try {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // Save user data to localStorage for demo login
+        const userData = {
+            name: signupForm.querySelector('input[type="text"]').value,
+            email: signupForm.querySelector('input[type="email"]').value,
+            password: password
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
+
+        showNotification('Account created successfully!');
+        loginModal.classList.remove('active');
+        document.body.style.overflow = '';
+    } catch (error) {
+        showNotification('Signup failed. Please try again.');
+    } finally {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+    }
+});    
+
 
 // Shopping cart
 let cart = [];
@@ -2899,35 +2966,6 @@ function initializePasswordToggle() {
     });
 }
 
-// Modify email login form submission
-emailLoginForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    console.log('📧 Email login form submitted');
-    
-    const email = emailLoginForm.querySelector('input[type="email"]').value.trim();
-    const password = emailLoginForm.querySelector('input[type="password"]').value.trim();
-    
-    console.log('📧 Email entered:', `"${email}"`);
-    console.log('🔑 Password entered:', `"${password}"`);
-    
-    if (!email || !password) {
-        showNotification('Please enter both email and password');
-        return;
-    }
-    
-    // Check credentials locally (same as phone login)
-    if (email === 'prasannadasari006@gmail.com' && password === 'Devi1413') {
-        console.log('✅ Email login successful');
-        handleSuccessfulLogin();
-        
-        // Clear form
-        emailLoginForm.reset();
-    } else {
-        console.log('❌ Email login failed - Invalid credentials');
-        showNotification('Invalid email or password');
-        emailLoginForm.querySelector('input[type="password"]').value = '';
-    }
-});
 
 // Modify phone login form submission
 phoneLoginForm.addEventListener('submit', (e) => {
@@ -3249,107 +3287,6 @@ document.querySelectorAll('.social-btn.facebook').forEach(btn => {
     });
 });
 
-// Signup Form
-const signupForm = document.getElementById('signupForm');
-const signupLinks = document.querySelectorAll('.signup-link');
-const loginLinks = document.querySelectorAll('.login-link');
-
-// Show signup form
-signupLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        loginForms.forEach(form => form.classList.remove('active'));
-        signupForm.classList.add('active');
-        tabBtns.forEach(btn => btn.classList.remove('active'));
-    });
-});
-
-// Show login form
-loginLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        signupForm.classList.remove('active');
-        document.getElementById('emailLoginForm').classList.add('active');
-        tabBtns[0].classList.add('active');
-    });
-});
-
-// Handle signup form submission
-signupForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const submitBtn = signupForm.querySelector('button[type="submit"]');
-    const name = signupForm.querySelector('input[type="text"]').value.trim();
-    const email = signupForm.querySelector('input[type="email"]').value.trim();
-    const phone = signupForm.querySelector('input[type="tel"]')?.value.trim() || '';
-    const password = signupForm.querySelector('input[type="password"]').value;
-    const confirmPassword = signupForm.querySelectorAll('input[type="password"]')[1].value;
-    
-    // Validate input
-    if (!name || !email || !password) {
-        showNotification('Name, email, and password are required!');
-        return;
-    }
-    
-    // Validate passwords match
-    if (password !== confirmPassword) {
-        showNotification('Passwords do not match!');
-        return;
-    }
-    
-    // Show loading state
-    submitBtn.classList.add('loading');
-    submitBtn.disabled = true;
-    
-    try {
-        // Create new user data
-        const newUser = {
-            id: Date.now(),
-            name: name,
-            email: email,
-            phone: phone,
-            avatar: 'https://via.placeholder.com/100',
-            addresses: [],
-            orders: [],
-            createdAt: new Date().toISOString()
-        };
-        
-        // Store user data in localStorage
-        localStorage.setItem('authToken', 'demo-token-' + Date.now());
-        localStorage.setItem('userData', JSON.stringify(newUser));
-        
-        // Set current user and login state
-        currentUser = newUser;
-        ensureUserFields(currentUser);
-        isLoggedIn = true;
-        
-        console.log('✅ Registration successful:', newUser);
-        
-        // Update UI
-        updateLoginState();
-        checkLoginStatusAndUpdateUI();
-        
-        // Show success message
-        showNotification('Account created successfully! Welcome!');
-        
-        // Close login modal
-        loginModal.classList.remove('active');
-        document.body.style.overflow = '';
-        
-        // Display restaurants and initialize features
-        displayRestaurants();
-        initializeFeatures();
-        
-        // Clear form
-        signupForm.reset();
-        
-    } catch (error) {
-        console.error('❌ Registration error:', error);
-        showNotification('Registration failed. Please try again.');
-    } finally {
-        submitBtn.classList.remove('loading');
-        submitBtn.disabled = false;
-    }
-});
 
 // Function to perform search
 function performSearch() {
@@ -4500,5 +4437,268 @@ function showDietaryInfoForProduct(item) {
   if (item.dairyFree) info.push('Dairy-Free');
   infoDiv.textContent = info.length ? 'Dietary: ' + info.join(', ') : '';
 }
-// Call showDietaryInfoForProduct(item) when opening product modal
+
+// Profile (example: fetch and display)
+async function loadProfile(email) {
+    const res = await fetch(`/api/profile?email=${encodeURIComponent(email)}`);
+    if (res.ok) {
+        const user = await res.json();
+        document.getElementById('userName').textContent = user.username;
+        document.getElementById('userEmail').textContent = user.email;
+        // ... update other profile fields ...
+    }
+}
+
+// Password Reset (add a form in your HTML and this handler)
+document.getElementById('resetPasswordForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = this.email.value;
+    const newPassword = this.newPassword.value;
+    const res = await fetch('/api/reset-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, newPassword })
+    });
+    const data = await res.json();
+    alert(data.message);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // --- LOGIN NOW BUTTON ---
+    const loginRequiredBtn = document.getElementById('loginRequiredBtn');
+    const loginModal = document.getElementById('loginModal');
+    if (loginRequiredBtn && loginModal) {
+        loginRequiredBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // --- SIGNUP FORM ---
+    
+
+
+    // --- LOGIN FORM ---
+    const emailLoginForm = document.getElementById('emailLoginForm');
+    if (emailLoginForm) {
+        emailLoginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = emailLoginForm.querySelector('input[type="email"]').value.trim();
+            const password = emailLoginForm.querySelector('input[type="password"]').value.trim();
+
+            if (!email || !password) {
+                showNotification('Please enter both email and password');
+                return;
+            }
+
+            // Get user from localStorage
+            const user = JSON.parse(localStorage.getItem('userData') || '{}');
+            if (user && user.email === email && user.password === password) {
+                currentUser = user;
+                isLoggedIn = true;
+                updateLoginState();
+                checkLoginStatusAndUpdateUI();
+                showNotification('Login successful!');
+                loginModal.classList.remove('active');
+                document.body.style.overflow = '';
+                displayRestaurants();
+                initializeFeatures();
+                emailLoginForm.reset();
+            } else {
+                showNotification('Invalid email or password');
+                emailLoginForm.querySelector('input[type="password"]').value = '';
+            }
+        });
+    }
+
+    // --- SIGNUP/LOGIN LINK SWITCHING ---
+    document.querySelectorAll('.signup-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('emailLoginForm').classList.remove('active');
+            document.getElementById('phoneLoginForm').classList.remove('active');
+            document.getElementById('signupForm').classList.add('active');
+        });
+    });
+    document.querySelectorAll('.login-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('signupForm').classList.remove('active');
+            document.getElementById('emailLoginForm').classList.add('active');
+        });
+    });
+});
+
 // ... existing code ...
+
+// Signup Form Handler (fetch to backend)
+
+// Login Form Handler (fetch to backend)
+
+
+// --- USER AUTHENTICATION (CLEANED, BACKEND ONLY) ---
+
+document.addEventListener('DOMContentLoaded', function() {
+    // --- LOGIN FORM ---
+    const emailLoginForm = document.getElementById('emailLoginForm');
+    const loginModal = document.getElementById('loginModal');
+    if (emailLoginForm) {
+        emailLoginForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = emailLoginForm.querySelector('input[type="email"]').value.trim();
+            const password = emailLoginForm.querySelector('input[type="password"]').value.trim();
+
+            if (!email || !password) {
+                showNotification('Please enter both email and password');
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await res.json();
+                if (res.ok && data.success) {
+                    // Save user info if needed
+                    localStorage.setItem('authToken', data.token || '');
+                    currentUser = { name: data.name, email: data.email };
+                    isLoggedIn = true;
+                    updateLoginState();
+                    checkLoginStatusAndUpdateUI();
+                    showNotification('Login successful!');
+                    if (loginModal) {
+                        loginModal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                    displayRestaurants();
+                    initializeFeatures();
+                    emailLoginForm.reset();
+                } else {
+                    showNotification(data.error || 'Invalid email or password');
+                    emailLoginForm.querySelector('input[type="password"]').value = '';
+                }
+            } catch (error) {
+                showNotification('Login failed. Please try again.');
+                emailLoginForm.querySelector('input[type="password"]').value = '';
+            }
+        });
+    }
+
+    // --- SIGNUP FORM ---
+   
+    // --- SIGNUP/LOGIN LINK SWITCHING (unchanged) ---
+    document.querySelectorAll('.signup-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('emailLoginForm').classList.remove('active');
+            document.getElementById('phoneLoginForm').classList.remove('active');
+            document.getElementById('signupForm').classList.add('active');
+        });
+    });
+
+    // --- PHONE LOGIN (OPTIONAL, COMMENT OUT IF NOT USED) ---
+    // const phoneLoginForm = document.getElementById('phoneLoginForm');
+    // if (phoneLoginForm) {
+    //     phoneLoginForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
+    //         // ... phone login logic ...
+    //     });
+    // }
+});
+
+
+// --- ENSURE SIGNUP/LOGIN LINK SWITCHING ALWAYS WORKS ---
+
+// This must be at the end of the file to guarantee DOM is loaded
+setTimeout(() => {
+  try {
+    document.querySelectorAll('.signup-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        console.log('Sign up link clicked!');
+        e.preventDefault();
+        const emailForm = document.getElementById('emailLoginForm');
+        const phoneForm = document.getElementById('phoneLoginForm');
+        const signupForm = document.getElementById('signupForm');
+        if (emailForm) emailForm.classList.remove('active');
+        if (phoneForm) phoneForm.classList.remove('active');
+        if (signupForm) signupForm.classList.add('active');
+      });
+    });
+    document.querySelectorAll('.login-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        console.log('Login link clicked!');
+        e.preventDefault();
+        const signupForm = document.getElementById('signupForm');
+        const emailForm = document.getElementById('emailLoginForm');
+        if (signupForm) signupForm.classList.remove('active');
+        if (emailForm) emailForm.classList.add('active');
+      });
+    });
+    console.log('Signup/login link switching handlers attached.');
+  } catch (err) {
+    console.error('Error attaching signup/login link switching:', err);
+  }
+}, 0);
+
+// ... existing code ...
+
+// --- FINAL BULLETPROOF SIGNUP/LOGIN LINK SWITCHING ---
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.signup-link').forEach(link => {
+    link.onclick = function(e) {
+      e.preventDefault();
+      var emailForm = document.getElementById('emailLoginForm');
+      var phoneForm = document.getElementById('phoneLoginForm');
+      var signupForm = document.getElementById('signupForm');
+      if (emailForm) emailForm.classList.remove('active');
+      if (phoneForm) phoneForm.classList.remove('active');
+      if (signupForm) signupForm.classList.add('active');
+      console.log('Signup link clicked, form switched!');
+    }
+  });
+  document.querySelectorAll('.login-link').forEach(link => {
+    link.onclick = function(e) {
+      e.preventDefault();
+      var signupForm = document.getElementById('signupForm');
+      var emailForm = document.getElementById('emailLoginForm');
+      if (signupForm) signupForm.classList.remove('active');
+      if (emailForm) emailForm.classList.add('active');
+      console.log('Login link clicked, form switched!');
+    }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Always start with only the email login form visible
+  document.getElementById('emailLoginForm').classList.add('active');
+  document.getElementById('signupForm').classList.remove('active');
+  document.getElementById('phoneLoginForm').classList.remove('active');
+
+  // Show signup form when "Sign up" is clicked
+  document.querySelectorAll('.signup-link').forEach(link => {
+    link.onclick = function(e) {
+      e.preventDefault();
+      document.getElementById('emailLoginForm').classList.remove('active');
+      document.getElementById('phoneLoginForm').classList.remove('active');
+      document.getElementById('signupForm').classList.add('active');
+      console.log('Signup link clicked, form switched!');
+    }
+  });
+
+  // Show login form when "Login" is clicked
+  document.querySelectorAll('.login-link').forEach(link => {
+    link.onclick = function(e) {
+      e.preventDefault();
+      document.getElementById('signupForm').classList.remove('active');
+      document.getElementById('emailLoginForm').classList.add('active');
+      document.getElementById('phoneLoginForm').classList.remove('active');
+      console.log('Login link clicked, form switched!');
+    }
+  });
+});
+ 

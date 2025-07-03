@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,10 +12,10 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('.'));
+app.use(express.static(path.join(__dirname)));
 app.use(bodyParser.json());
 
-// Database configuration
+// PostgreSQL connection
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -111,116 +112,40 @@ async function resetDatabase() {
 // Uncomment the line below to reset the database (only use when needed)
 // resetDatabase();
 
-// User Registration
+// Registration endpoint
 app.post('/api/register', async (req, res) => {
+    const { name, email, password } = req.body;
     try {
-        const { name, email, phone, password } = req.body;
-        console.log('📝 Registration attempt:', { name, email, phone: phone ? 'provided' : 'not provided' });
-
-        // Validate input
-        if (!name || !email || !password) {
-            return res.status(400).json({ error: 'Name, email, and password are required' });
-        }
-
-        // Check if user already exists
-        const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
-        if (existingUser.rows.length > 0) {
-            console.log('❌ User already exists:', email);
-            return res.status(400).json({ error: 'User with this email already exists' });
-        }
-
-        // Hash password
-        const saltRounds = 10;
-        const passwordHash = await bcrypt.hash(password, saltRounds);
-        console.log('🔐 Password hashed successfully');
-
-        // Insert new user
-        const newUser = await pool.query(
-            'INSERT INTO users (name, email, phone, password_hash) VALUES ($1, $2, $3, $4) RETURNING id, name, email, phone',
-            [name, email, phone, passwordHash]
+        await pool.query(
+            'INSERT INTO users (name, email, password) VALUES ($1, $2, $3)',
+            [name, email, password]
         );
-
-        console.log('✅ User created successfully:', newUser.rows[0].id);
-
-        // Generate JWT token
-        const token = jwt.sign(
-            { userId: newUser.rows[0].id, email: newUser.rows[0].email },
-            JWT_SECRET,
-            { expiresIn: '24h' }
-        );
-
-        res.status(201).json({
-            message: 'User registered successfully',
-            user: newUser.rows[0],
-            token
-        });
-
-    } catch (error) {
-        console.error('❌ Registration error:', error);
-        if (error.code === '23505') { // Unique constraint violation
-            res.status(400).json({ error: 'User with this email already exists' });
-        } else if (error.code === 'ECONNREFUSED') {
-            res.status(500).json({ error: 'Database connection failed. Please check your PostgreSQL setup.' });
+        res.json({ success: true });
+    } catch (err) {
+        if (err.code === '23505') { // unique_violation
+            res.status(400).json({ error: 'Email already registered' });
         } else {
-            res.status(500).json({ error: 'Internal server error: ' + error.message });
+            res.status(500).json({ error: 'Registration failed' });
         }
     }
 });
 
-// User Login
+// Login endpoint
 app.post('/api/login', async (req, res) => {
+    const { email, password } = req.body;
     try {
-        const { email, password } = req.body;
-        console.log('🔐 Login attempt for email:', email);
-
-        // Validate input
-        if (!email || !password) {
-            return res.status(400).json({ error: 'Email and password are required' });
-        }
-
-        // Find user
-        const user = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
-        if (user.rows.length === 0) {
-            console.log('❌ User not found:', email);
-            return res.status(401).json({ error: 'Invalid email or password' });
-        }
-
-        console.log('✅ User found:', user.rows[0].id);
-
-        // Check password
-        const isValidPassword = await bcrypt.compare(password, user.rows[0].password_hash);
-        if (!isValidPassword) {
-            console.log('❌ Invalid password for user:', email);
-            return res.status(401).json({ error: 'Invalid email or password' });
-        }
-
-        console.log('✅ Password verified for user:', email);
-
-        // Generate JWT token
-        const token = jwt.sign(
-            { userId: user.rows[0].id, email: user.rows[0].email },
-            JWT_SECRET,
-            { expiresIn: '24h' }
+        const result = await pool.query(
+            'SELECT * FROM users WHERE email = $1 AND password = $2',
+            [email, password]
         );
-
-        // Remove password from response
-        const { password_hash, ...userWithoutPassword } = user.rows[0];
-
-        console.log('✅ Login successful for user:', email);
-
-        res.json({
-            message: 'Login successful',
-            user: userWithoutPassword,
-            token
-        });
-
-    } catch (error) {
-        console.error('❌ Login error:', error);
-        if (error.code === 'ECONNREFUSED') {
-            res.status(500).json({ error: 'Database connection failed. Please check your PostgreSQL setup.' });
+        if (result.rows.length === 0) {
+            res.status(401).json({ error: 'Invalid credentials' });
         } else {
-            res.status(500).json({ error: 'Internal server error: ' + error.message });
+            const user = result.rows[0];
+            res.json({ success: true, name: user.name, email: user.email });
         }
+    } catch (err) {
+        res.status(500).json({ error: 'Login failed' });
     }
 });
 
