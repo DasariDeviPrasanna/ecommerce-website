@@ -115,37 +115,37 @@ async function resetDatabase() {
 // Registration endpoint
 app.post('/api/register', async (req, res) => {
     const { name, email, password } = req.body;
+    if (!name || !email || !password) return res.status(400).json({ success: false, error: 'All fields required' });
+
     try {
-        await pool.query(
-            'INSERT INTO users (name, email, password) VALUES ($1, $2, $3)',
-            [name, email, password]
-        );
+        const userExists = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+        if (userExists.rows.length > 0) return res.status(400).json({ success: false, error: 'Email already registered' });
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+        await pool.query('INSERT INTO users (name, email, password_hash) VALUES ($1, $2, $3)', [name, email, hashedPassword]);
         res.json({ success: true });
     } catch (err) {
-        if (err.code === '23505') { // unique_violation
-            res.status(400).json({ error: 'Email already registered' });
-        } else {
-            res.status(500).json({ error: 'Registration failed' });
-        }
+        console.error('Registration error:', err);
+        res.status(500).json({ success: false, error: 'Server error' });
     }
 });
 
 // Login endpoint
 app.post('/api/login', async (req, res) => {
-    const { email, password } = req.body;
+        const { email, password } = req.body;
+    if (!email || !password) return res.status(400).json({ success: false, error: 'All fields required' });
+
     try {
-        const result = await pool.query(
-            'SELECT * FROM users WHERE email = $1 AND password = $2',
-            [email, password]
-        );
-        if (result.rows.length === 0) {
-            res.status(401).json({ error: 'Invalid credentials' });
-        } else {
-            const user = result.rows[0];
-            res.json({ success: true, name: user.name, email: user.email });
-        }
+        const userRes = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+        if (userRes.rows.length === 0) return res.status(400).json({ success: false, error: 'Invalid email or password' });
+
+        const user = userRes.rows[0];
+        const match = await bcrypt.compare(password, user.password_hash);
+        if (!match) return res.status(400).json({ success: false, error: 'Invalid email or password' });
+
+        res.json({ success: true, name: user.name, email: user.email });
     } catch (err) {
-        res.status(500).json({ error: 'Login failed' });
+        res.status(500).json({ success: false, error: 'Server error' });
     }
 });
 
@@ -255,11 +255,11 @@ app.get('/api/profile', authenticateToken, async (req, res) => {
 app.put('/api/profile', authenticateToken, async (req, res) => {
     try {
         const userId = req.user.userId;
-        const { name, phone, avatar_url } = req.body;
+        const { name, phone, avatar_url, address_line1, address_line2, city, state, zip, country } = req.body;
 
         const updatedUser = await pool.query(
-            'UPDATE users SET name = COALESCE($1, name), phone = COALESCE($2, phone), avatar_url = COALESCE($3, avatar_url), updated_at = CURRENT_TIMESTAMP WHERE id = $4 RETURNING id, name, email, phone, avatar_url',
-            [name, phone, avatar_url, userId]
+            'UPDATE users SET name = COALESCE($1, name), phone = COALESCE($2, phone), avatar_url = COALESCE($3, avatar_url), address_line1 = COALESCE($4, address_line1), address_line2 = COALESCE($5, address_line2), city = COALESCE($6, city), state = COALESCE($7, state), zip = COALESCE($8, zip), country = COALESCE($9, country), updated_at = CURRENT_TIMESTAMP WHERE id = $10 RETURNING id, name, email, phone, avatar_url, address_line1, address_line2, city, state, zip, country',
+            [name, phone, avatar_url, address_line1, address_line2, city, state, zip, country, userId]
         );
 
         if (updatedUser.rows.length === 0) {
@@ -295,6 +295,38 @@ app.get('/api/user/reviews', authenticateToken, async (req, res) => {
     } catch (error) {
         console.error('Get user reviews error:', error);
         res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Add a new address for the logged-in user
+app.post('/api/addresses', authenticateToken, async (req, res) => {
+    const userId = req.user.userId;
+    const { address_line1, address_line2, city, state, zip, country, label } = req.body;
+    try {
+        const result = await pool.query(
+            `INSERT INTO addresses (user_id, address_line1, address_line2, city, state, zip, country, label)
+             VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`,
+            [userId, address_line1, address_line2, city, state, zip, country, label]
+        );
+        res.status(201).json({ success: true, address: result.rows[0] });
+    } catch (err) {
+        console.error('Add address error:', err);
+        res.status(500).json({ success: false, error: 'Database error' });
+    }
+});
+
+// Get all addresses for the logged-in user
+app.get('/api/addresses', authenticateToken, async (req, res) => {
+    const userId = req.user.userId;
+    try {
+        const result = await pool.query(
+            `SELECT * FROM addresses WHERE user_id = $1 ORDER BY created_at DESC`,
+            [userId]
+        );
+        res.json({ success: true, addresses: result.rows });
+    } catch (err) {
+        console.error('Get addresses error:', err);
+        res.status(500).json({ success: false, error: 'Database error' });
     }
 });
 

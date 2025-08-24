@@ -1122,7 +1122,7 @@ const restaurants = [
     },
     {
         id: 3,
-        name: "Dragon Wok",
+        name: "Heavens inn",
         cuisine: "Chinese",
         rating: 4.6,
         deliveryTime: "35-45 min",
@@ -1130,24 +1130,185 @@ const restaurants = [
         menuItems: [
             {
                 id: 19,
-                name: "Wonton Soup",
+                name: "sweet corn Soup",
                 category: "veg-soups",
                 price: 140,
                 description: "Clear soup with vegetable wontons",
-                image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29udG9uJTIwc291cHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+                image: "https://i.pinimg.com/736x/e7/11/c4/e711c4f4b44391f9b34b4ab27ffeb453.jpg",
                 feedback: []
             },
             {
                 id: 20,
-                name: "Hot & Sour Soup",
+                name: "manchow Soup",
                 category: "veg-soups",
                 price: 130,
                 description: "Spicy and tangy vegetable soup",
-                image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwYW5kJTIwc291ciUyMHNvdXB8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+                image: "https://i.pinimg.com/736x/cc/9f/ee/cc9feea4dba6acd6f161b3df452742d1.jpg",
                 feedback: []
             },
             {
                 id: 21,
+                name: "tomato Soup",
+                category: "veg-soups",
+                price: 130,
+                description: "Spicy and tangy vegetable soup",
+                image: "https://i.pinimg.com/736x/2f/1f/c8/2f1fc85eb75f7bc166ba6a4f217d49d8.jpg",
+                feedback: []
+            },
+            {
+                id: 22,
+                name: "lemon coriander Soup",
+                category: "veg-soups",
+                price: 130,
+                description: "Spicy and tangy vegetable soup",
+                image: "https://i.pinimg.com/736x/c9/db/46/c9db46c89e27229e2a8ede5c45d1f942.jpg",
+                feedback: []
+            },
+            {
+                id: 23,
+                name: "panner tikka",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy vegetable spring rolls with sweet chili sauce",
+                image: "https://i.pinimg.com/736x/02/71/3e/02713e2e9b4918f2137289de6ac3f2c0.jpg",
+                feedback: []
+            },
+            {
+                id: 24,
+                name: "panner 65",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy vegetable spring rolls with sweet chili sauce",
+                image: "https://i.pinimg.com/736x/4a/70/6c/4a706c303161f1d1fbdc4123a3f3da3c.jpg",
+                feedback: []
+            },
+            {
+                id: 25,
+                name: "panner popcorn",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy panner spring rolls with sweet chili sauce",
+                image: "https://i.pinimg.com/1200x/1f/42/78/1f4278ac2569339e227cbfc57c4f5c55.jpg",
+                feedback: []
+            },
+            {
+                id: 26,
+                name: "mushroom 65",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy mushroom fritters with spicy dipping sauce",
+                image: "https://i.pinimg.com/736x/76/8b/a3/768ba3ead58a9e960b9c2ea8da1a687d.jpg",
+                feedback: []
+            },
+            {
+                id: 27,
+                name: "chilly mushroom",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy mushroom fritters with spicy dipping sauce",
+                image: "https://i.pinimg.com/1200x/1d/c8/d5/1dc8d589c527b3590af29485b90c5572.jpg",
+                feedback: []
+            },
+            {
+                id: 28,
+                name: "garlic mushroom",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy garlic mushroom fritters with spicy dipping sauce",
+                image: "https://i.pinimg.com/736x/bd/13/9e/bd139e51701ae25b936e1f9f1412ab15.jpg",
+                feedback: []
+            },
+            {
+                id: 29,
+                name: "crispy corn",
+                category: "veg-starters",
+                price: 180,
+                description: "Crispy corn fritters with spicy dipping sauce",
+                image: "https://i.pinimg.com/736x/cb/d0/8a/cbd08ac03b39f37bf5c1ef373d57892f.jpg",
+                feedback: []
+            },
+            {
+                id: 30,
+                name: "Veg Fried Rice",
+                category: "veg-main",
+                price: 170,
+                description: "Stir-fried rice with mixed vegetables",
+                image: "https://i.pinimg.com/1200x/9a/8f/69/9a8f69fd582406faad3c2a31ca4b7808.jpg",
+                feedback: []
+            },
+             {
+                id: 31,
+                name: "Paneer Fried Rice",
+                category: "veg-main",
+                price: 170,
+                description: "Stir-fried rice with mixed vegetables",
+                image: "https://i.pinimg.com/736x/1e/c7/ae/1ec7ae1d62c6a6ca35cfce0afbfa3000.jpg",
+                feedback: []
+            }, {
+                id: 32,
+                name: "Mushroom Fried Rice",
+                category: "veg-main",
+                price: 170,
+                description: "Stir-fried rice with mixed vegetables",
+                image: "https://i.pinimg.com/736x/f6/83/23/f6832360db532a65c17e2bc58f0e219c.jpg",
+                feedback: []
+            },
+             {
+                id: 33,
+                name: "spcl Veg Fried Rice",
+                category: "veg-main",
+                price: 170,
+                description: "Stir-fried rice with mixed vegetables",
+                image: "https://i.pinimg.com/1200x/d1/c6/f8/d1c6f87a8e16e160335020c8bbde4c3c.jpg",
+                feedback: []
+            },
+             {
+                id: 34,
+                name: "mixed veg biryani",
+                category: "veg-main",
+                price: 170,
+                description: "Aromatic basmati rice with mixed vegetables",
+                image: "https://i.pinimg.com/736x/fb/35/c1/fb35c1f316262775e2338053fe551826.jpg",
+                feedback: []
+            },
+             {
+                id: 35,
+                name: "paneer biryani",
+                category: "veg-main",
+                price: 170,
+                description: "Aromatic basmati rice with paneer",
+                image: "https://i.pinimg.com/736x/ce/7e/09/ce7e09275ab387656a09f452f8c1d677.jpg",
+                feedback: []
+            },
+             {
+                id: 36,
+                name: "mushroom biryani",
+                category: "veg-main",
+                price: 170,
+                description: "Aromatic basmati rice with mushrooms",
+                image: "https://i.pinimg.com/736x/78/45/02/7845021dd6a3e62bf81218acba3e2e8e.jpg",
+                feedback: []
+            },
+             {
+                id: 37,
+                name: "Bismillabath",
+                category: "veg-main",
+                price: 170,
+                description: "Aromatic basmati rice with mixed vegetables",
+                image: "https://i.pinimg.com/736x/0d/b4/53/0db453001671dba830e7a48976dfc6ff.jpg",
+                feedback: []
+            },
+             {
+                id: 38,
+                name: "Curd Rice",
+                category: "veg-main",
+                price: 170,
+                description: "Chilled yogurt rice with spices",
+                image: "https://i.pinimg.com/736x/91/bf/04/91bf0422c406ab221ef3f78febfd2aff.jpg",
+                feedback: []
+            },
+            {
+                id: 39,
                 name: "Chicken Wonton Soup",
                 category: "nonveg-soups",
                 price: 160,
@@ -1467,45 +1628,82 @@ loginLinks.forEach(link => {
     });
 });
 
-// Handle signup form submission
+// --- SIGNUP FORM HANDLER ---
 signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const submitBtn = signupForm.querySelector('button[type="submit"]');
+    const name = signupForm.querySelector('input[type="text"]').value;
+    const email = signupForm.querySelector('input[type="email"]').value;
     const password = signupForm.querySelector('input[type="password"]').value;
     const confirmPassword = signupForm.querySelectorAll('input[type="password"]')[1].value;
-    
-    // Validate passwords match
+
     if (password !== confirmPassword) {
         showNotification('Passwords do not match!');
         return;
     }
-    
-    // Show loading state
+
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
-   try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Save user data to localStorage for demo login
-        const userData = {
-            name: signupForm.querySelector('input[type="text"]').value,
-            email: signupForm.querySelector('input[type="email"]').value,
-            password: password
-        };
-        localStorage.setItem('userData', JSON.stringify(userData));
-
-        showNotification('Account created successfully!');
-        loginModal.classList.remove('active');
-        document.body.style.overflow = '';
+    try {
+        const res = await fetch('http://localhost:3000/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+            showNotification('Account created successfully!');
+            loginModal.classList.remove('active');
+            document.body.style.overflow = '';
+        } else {
+            showNotification(data.error || 'Signup failed.');
+        }
     } catch (error) {
         showNotification('Signup failed. Please try again.');
     } finally {
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
     }
-});    
+});
 
+// --- LOGIN FORM HANDLER ---
+emailLoginForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = emailLoginForm.querySelector('input[type="email"]').value.trim();
+    const password = emailLoginForm.querySelector('input[type="password"]').value.trim();
+
+    if (!email || !password) {
+        showNotification('Please enter both email and password');
+        return;
+    }
+
+    try {
+        const res = await fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+            currentUser = { name: data.name, email: data.email };
+            isLoggedIn = true;
+            updateLoginState();
+            checkLoginStatusAndUpdateUI();
+            showNotification('Login successful!');
+            loginModal.classList.remove('active');
+            document.body.style.overflow = '';
+            displayRestaurants();
+            initializeFeatures();
+            emailLoginForm.reset();
+        } else {
+            showNotification(data.error || 'Invalid email or password');
+            emailLoginForm.querySelector('input[type="password"]').value = '';
+        }
+    } catch (error) {
+        showNotification('Login failed. Please try again.');
+        emailLoginForm.querySelector('input[type="password"]').value = '';
+    }
+});
 
 // Shopping cart
 let cart = [];
@@ -2816,9 +3014,16 @@ if (newsletterForm) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const selector = this.getAttribute('href');
+        // Only scroll if selector is not just '#'
+        if (selector && selector !== '#') {
+            const target = document.querySelector(selector);
+            if (target) {
+                target.scrollIntoView({
             behavior: 'smooth'
         });
+            }
+        }
     });
 });
 
@@ -4701,4 +4906,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
- 
+
+document.getElementById('addressForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const address = {
+        address_line1: document.getElementById('addressLine1').value,
+        address_line2: document.getElementById('addressLine2').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value,
+        zip: document.getElementById('zip').value,
+        country: document.getElementById('country').value,
+        label: document.getElementById('label').value
+    };
+    // Add authentication header if needed
+    const res = await fetch('http://localhost:3000/api/addresses', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(address)
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+        showNotification('Address saved!');
+        // Optionally refresh address list
+    } else {
+        showNotification('Failed to save address');
+    }
+});
+
+document.getElementById('addAddressBtn').addEventListener('click', function() {
+    document.getElementById('addressModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const addAddressBtn = document.getElementById('addAddressBtn');
+    const addressModal = document.getElementById('addressModal');
+    if (addAddressBtn && addressModal) {
+        addAddressBtn.addEventListener('click', function() {
+            addressModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    // Also add close handler for the modal
+    const closeAddressModal = document.getElementById('closeAddressModal');
+    if (closeAddressModal && addressModal) {
+        closeAddressModal.addEventListener('click', function() {
+            addressModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+});
