@@ -1344,7 +1344,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 41,
+                id: 43,
                 name: "Spring Rolls",
                 category: "veg-starters",
                 price: 180,
@@ -1354,11 +1354,65 @@ const restaurants = [
             },
             {
                 id: 41,
-                name: "Chicken Spring Rolls",
+                name: "Chilli Chicken",
                 category: "nonveg-starters",
                 price: 200,
-                description: "Crispy chicken spring rolls with sweet chili sauce",
+                description: "Crispy chicken tossed in spicy sauce",
                 image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMHNwcmluZyUyMHJvbGxzfGVufDB8fDB8fHww&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 42,
+                name: "Chicken 65",
+                category: "nonveg-starters",
+                price: 200,
+                description: "Spicy deep-fried chicken bites",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMDY1fGVufDB8fDB8fHww&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 43,
+                name: "Chicken Lollipop",
+                category: "nonveg-starters",
+                price: 200,
+                description: "Deep-fried chicken drumettes with a tangy sauce",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGxvbGxpcHAlMjBzb3VwfGVufDB8fDB8fHww&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 44,
+                name: "pepper Chicken",
+                category: "nonveg-starters",
+                price: 200,
+                description: "Spicy pepper chicken with herbs",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMHBvcHBlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 45,
+                name: "garlic Chicken",
+                category: "nonveg-starters",
+                price: 200,
+                description: "Garlic-flavored chicken with herbs",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGdhcmxpYyUyMGNoaWNrZW58ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 46,
+                name: "lemon Chicken",
+                category: "nonveg-starters",
+                price: 220,
+                description: "Spicy chicken tossed in lemon sauce",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMG1hbmNodXJpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 47,
+                name: "Chicken Tandoori",
+                category: "nonveg-starters",
+                price: 250,
+                description: "Spicy grilled chicken marinated in yogurt and spices",
+                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMHRhbmRvcmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
                 feedback: []
             },
             {
