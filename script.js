@@ -1416,7 +1416,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 42,
+                id: 48,
                 name: "Veg Noodles",
                 category: "veg-noodles",
                 price: 160,
@@ -1425,12 +1425,21 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 43,
-                name: "Chicken Noodles",
+                id: 49,
+                name: "Chicken Soft Noodles",
                 category: "nonveg-noodles",
                 price: 190,
                 description: "Stir-fried noodles with chicken and vegetables",
                 image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMG5vb2RsZSUyMHNvdXB8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 50,
+                name: "egg Noodles",
+                category: "nonveg-noodles",
+                price: 180,
+                description: "Stir-fried noodles with egg and vegetables",
+                image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWdnJTIwbm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
                 feedback: []
             },
             {
