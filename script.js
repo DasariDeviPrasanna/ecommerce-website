@@ -1335,6 +1335,15 @@ const restaurants = [
                 feedback: []
             },
             {
+                id: 42,
+                name: "Paya Soup",
+                category: "nonveg-soups",
+                price: 150,
+                description: "Spicy trotters soup with herbs",
+                image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF5YSUyMHNvdXAlMjB3aXRoJTIwaGVycHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
                 id: 41,
                 name: "Spring Rolls",
                 category: "veg-starters",
