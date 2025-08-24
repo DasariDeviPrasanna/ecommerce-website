@@ -1318,11 +1318,20 @@ const restaurants = [
             },
             {
                 id: 40,
-                name: "Chicken Corn Soup",
+                name: "Chicken manchow Soup",
                 category: "nonveg-soups",
                 price: 150,
                 description: "Clear soup with chicken and sweet corn",
                 image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGNvcm4lMjBzb3VwfGVufDB8fDB8fHww&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 41,
+                name: "Chicken dragon Soup",
+                category: "nonveg-soups",
+                price: 150,
+                description: "Tangy soup with chicken and fresh coriander",
+                image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGxlbW9uJTIwY29yaWFuZGVyfGVufDB8fDB8fHww&w=1000&q=80",
                 feedback: []
             },
             {
