@@ -1443,6 +1443,24 @@ const restaurants = [
                 feedback: []
             },
             {
+                id: 51,
+                name: "Chicken Schezwan Noodles",
+                category: "nonveg-noodles",
+                price: 200,
+                description: "Spicy stir-fried noodles with chicken and Schezwan sauce",
+                image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMHNjaGV6d2FuJTIwbm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
+                id: 52,
+                name: "Chicken manchurian noodles",
+                category: "nonveg-noodles",
+                price: 210,
+                description: "Spicy stir-fried noodles with chicken and Manchurian sauce",
+                image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMG1hbmNodXJpb258ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+                feedback: []
+            },
+            {
                 id: 44,
                 name: "Veg Fried Rice",
                 category: "veg-main",
