@@ -1489,10 +1489,46 @@ const restaurants = [
             },
             {
                 id: 56,
-                name: "Veg Fried Rice",
-                category: "veg-main",
+                name: "chicken dum biryani",
+                category: "nonveg-main",
                 price: 170,
-                description: "Stir-fried rice with mixed vegetables",
+                description: "Spicy chicken biryani with fragrant basmati rice",
+                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                feedback: []
+            },
+            {
+                id: 57,
+                name: "mutton dum biryani",
+                category: "nonveg-main",
+                price: 180,
+                description: "Spicy mutton biryani with fragrant basmati rice",
+                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                feedback: []
+            },
+            {
+                id: 58,
+                name: "Paneer Fried Rice",
+                category: "veg-main",
+                price: 180,
+                description: "Stir-fried rice with paneer and vegetables",
+                image: "https://i.pinimg.com/736x/8a/1f/90/8a1f90ab610564c0f8e70ce341ffb72b.jpg",
+                feedback: []
+            },
+            {
+                id: 59,
+                name: "Chicken fry piece Biryani",
+                category: "nonveg-main",
+                price: 200,
+                description: "Spicy chicken fry piece biryani with fragrant basmati rice",
+                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                feedback: []
+            },
+            {
+                id: 60,
+                name: "Prawn Biryani",
+                category: "nonveg-main",
+                price: 220,
+                description: "Spicy prawn biryani with fragrant basmati rice",
                 image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
                 feedback: []
             },
