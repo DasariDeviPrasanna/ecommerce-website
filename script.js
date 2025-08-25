@@ -1461,6 +1461,33 @@ const restaurants = [
                 feedback: []
             },
             {
+                id: 53,
+                name: "Veg Manchurian Noodles",
+                category: "veg-noodles",
+                price: 180,
+                description: "Spicy stir-fried noodles with vegetables and Manchurian sauce",
+                image: "https://i.pinimg.com/736x/75/ca/c3/75cac3b8a2adc02679f6aec4bf832b6a.jpg",
+                feedback: []
+            },
+            {
+                id: 54,
+                name: "Soft Noodles",
+                category: "veg-noodles",
+                price: 170,
+                description: "Spicy stir-fried noodles with vegetables",
+                image: "https://i.pinimg.com/736x/75/ca/c3/75cac3b8a2adc02679f6aec4bf832b6a.jpg",
+                feedback: []
+            },
+            {
+                id: 55,
+                name: "Paneer Noodles",
+                category: "veg-noodles",
+                price: 180,
+                description: "Spicy stir-fried noodles with paneer and Hakka sauce",
+                image: "https://i.pinimg.com/736x/75/ca/c3/75cac3b8a2adc02679f6aec4bf832b6a.jpg",
+                feedback: []
+            },
+            {
                 id: 44,
                 name: "Veg Fried Rice",
                 category: "veg-main",
