@@ -1531,16 +1531,8 @@ const restaurants = [
                 description: "Spicy prawn biryani with fragrant basmati rice",
                 image: "https://i.pinimg.com/736x/8f/7c/90/8f7c90c791b844ca1a867dc276bbe55b.jpg",
                 feedback: []
-            },
-            {
-                id: 45,
-                name: "Chicken Fried Rice",
-                category: "nonveg-main",
-                price: 200,
-                description: "Stir-fried rice with chicken and vegetables",
-                image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMGZyaWVkJTIwcmljZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
-                feedback: []
             }
+            
         ]
     },
     {
