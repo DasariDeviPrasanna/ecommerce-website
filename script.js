@@ -1493,7 +1493,7 @@ const restaurants = [
                 category: "nonveg-main",
                 price: 170,
                 description: "Spicy chicken biryani with fragrant basmati rice",
-                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                image: "https://i.pinimg.com/736x/ea/0d/85/ea0d857a728002af40b932261b10906b.jpg",
                 feedback: []
             },
             {
@@ -1502,7 +1502,7 @@ const restaurants = [
                 category: "nonveg-main",
                 price: 180,
                 description: "Spicy mutton biryani with fragrant basmati rice",
-                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                image: "https://i.pinimg.com/736x/6c/f4/83/6cf48394168034cc994d08137f8fbd0b.jpg",
                 feedback: []
             },
             {
@@ -1520,7 +1520,7 @@ const restaurants = [
                 category: "nonveg-main",
                 price: 200,
                 description: "Spicy chicken fry piece biryani with fragrant basmati rice",
-                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                image: "https://i.pinimg.com/736x/29/5f/65/295f6572d6639b939114433744c0cfb4.jpg",
                 feedback: []
             },
             {
@@ -1529,7 +1529,7 @@ const restaurants = [
                 category: "nonveg-main",
                 price: 220,
                 description: "Spicy prawn biryani with fragrant basmati rice",
-                image: "https://i.pinimg.com/1200x/aa/1b/a2/aa1ba211f9d8867b605c26f0c0ff9ebf.jpg",
+                image: "https://i.pinimg.com/736x/8f/7c/90/8f7c90c791b844ca1a867dc276bbe55b.jpg",
                 feedback: []
             },
             {
