@@ -1129,7 +1129,7 @@ const restaurants = [
         image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbmVzZSUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
         menuItems: [
             {
-                id: 19,
+                id: 1,
                 name: "sweet corn Soup",
                 category: "veg-soups",
                 price: 140,
@@ -1138,7 +1138,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 20,
+                id: 2,
                 name: "manchow Soup",
                 category: "veg-soups",
                 price: 130,
@@ -1147,7 +1147,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 21,
+                id: 3,
                 name: "tomato Soup",
                 category: "veg-soups",
                 price: 130,
@@ -1156,7 +1156,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 22,
+                id: 4,
                 name: "lemon coriander Soup",
                 category: "veg-soups",
                 price: 130,
@@ -1165,7 +1165,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 23,
+                id: 5,
                 name: "panner tikka",
                 category: "veg-starters",
                 price: 180,
@@ -1174,7 +1174,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 24,
+                id: 6,
                 name: "panner 65",
                 category: "veg-starters",
                 price: 180,
@@ -1183,7 +1183,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 25,
+                id: 7,
                 name: "panner popcorn",
                 category: "veg-starters",
                 price: 180,
@@ -1192,7 +1192,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 26,
+                id: 8,
                 name: "mushroom 65",
                 category: "veg-starters",
                 price: 180,
@@ -1201,7 +1201,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 27,
+                id: 9,
                 name: "chilly mushroom",
                 category: "veg-starters",
                 price: 180,
@@ -1210,7 +1210,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 28,
+                id: 10,
                 name: "garlic mushroom",
                 category: "veg-starters",
                 price: 180,
@@ -1219,7 +1219,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 29,
+                id: 11,
                 name: "crispy corn",
                 category: "veg-starters",
                 price: 180,
@@ -1228,7 +1228,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 30,
+                id: 12,
                 name: "Veg Fried Rice",
                 category: "veg-main",
                 price: 170,
@@ -1237,7 +1237,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 31,
+                id: 13,
                 name: "Paneer Fried Rice",
                 category: "veg-main",
                 price: 170,
@@ -1245,7 +1245,7 @@ const restaurants = [
                 image: "https://i.pinimg.com/736x/1e/c7/ae/1ec7ae1d62c6a6ca35cfce0afbfa3000.jpg",
                 feedback: []
             }, {
-                id: 32,
+                id: 14,
                 name: "Mushroom Fried Rice",
                 category: "veg-main",
                 price: 170,
@@ -1254,7 +1254,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 33,
+                id: 15,
                 name: "spcl Veg Fried Rice",
                 category: "veg-main",
                 price: 170,
@@ -1263,7 +1263,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 34,
+                id: 16,
                 name: "mixed veg biryani",
                 category: "veg-main",
                 price: 170,
@@ -1272,7 +1272,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 35,
+                id: 17,
                 name: "paneer biryani",
                 category: "veg-main",
                 price: 170,
@@ -1281,7 +1281,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 36,
+                id: 18,
                 name: "mushroom biryani",
                 category: "veg-main",
                 price: 170,
@@ -1290,7 +1290,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 37,
+                id: 19,
                 name: "Bismillabath",
                 category: "veg-main",
                 price: 170,
@@ -1299,7 +1299,7 @@ const restaurants = [
                 feedback: []
             },
              {
-                id: 38,
+                id: 20,
                 name: "Curd Rice",
                 category: "veg-main",
                 price: 170,
@@ -1308,7 +1308,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 39,
+                id: 21,
                 name: "Chicken Hot & Sour Soup",
                 category: "nonveg-soups",
                 price: 150,
@@ -1317,7 +1317,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 40,
+                id: 22,
                 name: "Chicken manchow Soup",
                 category: "nonveg-soups",
                 price: 150,
@@ -1326,7 +1326,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 41,
+                id: 23,
                 name: "Chicken dragon Soup",
                 category: "nonveg-soups",
                 price: 150,
@@ -1335,7 +1335,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 42,
+                id: 24,
                 name: "Paya Soup",
                 category: "nonveg-soups",
                 price: 150,
@@ -1344,7 +1344,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 43,
+                id: 25,
                 name: "Spring Rolls",
                 category: "veg-starters",
                 price: 180,
@@ -1353,7 +1353,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 41,
+                id: 26,
                 name: "Chilli Chicken",
                 category: "nonveg-starters",
                 price: 200,
@@ -1362,7 +1362,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 42,
+                id: 27,
                 name: "Chicken 65",
                 category: "nonveg-starters",
                 price: 200,
@@ -1371,7 +1371,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 43,
+                id: 28,
                 name: "Chicken Lollipop",
                 category: "nonveg-starters",
                 price: 200,
@@ -1380,7 +1380,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 44,
+                id: 29,
                 name: "pepper Chicken",
                 category: "nonveg-starters",
                 price: 200,
@@ -1389,7 +1389,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 45,
+                id: 30,
                 name: "garlic Chicken",
                 category: "nonveg-starters",
                 price: 200,
@@ -1398,7 +1398,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 46,
+                id: 31,
                 name: "lemon Chicken",
                 category: "nonveg-starters",
                 price: 220,
@@ -1407,7 +1407,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 47,
+                id: 32,
                 name: "Chicken Tandoori",
                 category: "nonveg-starters",
                 price: 250,
@@ -1416,7 +1416,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 48,
+                id: 33,
                 name: "Veg Noodles",
                 category: "veg-noodles",
                 price: 160,
@@ -1425,7 +1425,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 49,
+                id: 34,
                 name: "Chicken Soft Noodles",
                 category: "nonveg-noodles",
                 price: 190,
@@ -1434,7 +1434,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 50,
+                id: 35,
                 name: "egg Noodles",
                 category: "nonveg-noodles",
                 price: 180,
@@ -1443,7 +1443,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 51,
+                id: 36,
                 name: "Chicken Schezwan Noodles",
                 category: "nonveg-noodles",
                 price: 200,
@@ -1452,7 +1452,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 52,
+                id: 37,
                 name: "Chicken manchurian noodles",
                 category: "nonveg-noodles",
                 price: 210,
@@ -1461,7 +1461,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 53,
+                id: 38,
                 name: "Veg Manchurian Noodles",
                 category: "veg-noodles",
                 price: 180,
@@ -1470,7 +1470,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 54,
+                id: 39,
                 name: "Soft Noodles",
                 category: "veg-noodles",
                 price: 170,
@@ -1479,7 +1479,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 55,
+                id: 40,
                 name: "Paneer Noodles",
                 category: "veg-noodles",
                 price: 180,
@@ -1488,7 +1488,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 56,
+                id: 41,
                 name: "chicken dum biryani",
                 category: "nonveg-main",
                 price: 170,
@@ -1497,7 +1497,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 57,
+                id: 42,
                 name: "mutton dum biryani",
                 category: "nonveg-main",
                 price: 180,
@@ -1506,7 +1506,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 58,
+                id: 43,
                 name: "Paneer Fried Rice",
                 category: "veg-main",
                 price: 180,
@@ -1515,7 +1515,7 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 59,
+                id: 44,
                 name: "Chicken fry piece Biryani",
                 category: "nonveg-main",
                 price: 200,
@@ -1524,12 +1524,57 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 60,
+                id: 45,
                 name: "Prawn Biryani",
                 category: "nonveg-main",
                 price: 220,
                 description: "Spicy prawn biryani with fragrant basmati rice",
                 image: "https://i.pinimg.com/736x/8f/7c/90/8f7c90c791b844ca1a867dc276bbe55b.jpg",
+                feedback: []
+            },
+            {
+                id: 46,
+                name:"Gulab Jamun",
+                category: "desserts",
+                price: 80,
+                description: "Soft and sweet milk-based dumplings",
+                image: "https://i.pinimg.com/736x/71/9a/3e/719a3e079dc7885053736c8be5dc8681.jpg",
+                feedback: []
+            },
+            {
+                id: 47,
+                name: "Ras Malai",
+                category: "desserts",
+                price: 90,
+                description: "Soft cheese dumplings in sweetened milk",
+                image: "https://i.pinimg.com/1200x/dc/e5/52/dce552af6cf31851ac8f487ee8400197.jpg",
+                feedback: []
+            },
+            {
+                id: 48,
+                name: "Badam Kheer",
+                category: "desserts",
+                price: 100,
+                description: "Rice pudding made with milk and sugar,flavored with cardamom and garnished with almonds.",
+                image: "https://i.pinimg.com/736x/2e/82/9a/2e829a3f1a631e4e383e65d33f54e55a.jpg",
+                feedback: []
+            },
+            {
+                id:49,
+                name: "vanilla ice cream",
+                category: "desserts",
+                price: 90,
+                description: "Creamy vanilla ice cream made with real vanilla beans",
+                image: "https://i.pinimg.com/736x/17/58/8b/17588bde404baa370330128f97c79b2f.jpg",
+                feedback: []
+            },
+            {
+                id: 50,
+                name: "ButterScotch ice cream",
+                category: "desserts",
+                price: 120,
+                description: "Rich butter scotch ice cream with a creamy texture",
+                image: "https://i.pinimg.com/1200x/03/8a/34/038a347d79698515c60eba741b5806ec.jpg",
                 feedback: []
             }
             
