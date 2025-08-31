@@ -1708,7 +1708,7 @@ function initializeSlideshow() {
     // Create slides from restaurants
     const slidesHTML = restaurants.map(restaurant => `
         <div class="slide" data-restaurant-id="${restaurant.id}">
-            <img src="${restaurant.image}" alt="${restaurant.name}">
+            <image src="${restaurant.image}" alt="${restaurant.name}">
             <div class="slide-content">
                 <h2>${restaurant.name}</h2>
                 <p class="cuisine">${restaurant.cuisine}</p>
