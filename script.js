@@ -303,7 +303,7 @@ const restaurants = [
         cuisine: "Indian, Chinese",
         rating: 4.5,
         deliveryTime: "30-40 min",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+        image: "https://i.pinimg.com/1200x/eb/ce/af/ebceafd4fc6f1d69b8fcb231f746a4d9.jpg",
         menuItems: [
             {
                 id: 1,
@@ -727,7 +727,7 @@ const restaurants = [
         cuisine: "Indian",
         rating: 4.2,
         deliveryTime: "25-35 min",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+        image: "https://i.pinimg.com/736x/59/06/25/590625d49bfa0c9ae0efdf6e884bb71e.jpg",
         menuItems: [
 
             {
@@ -1126,7 +1126,7 @@ const restaurants = [
         cuisine: "Chinese",
         rating: 4.6,
         deliveryTime: "35-45 min",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbmVzZSUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+        image: "https://i.pinimg.com/736x/39/a3/37/39a3378eae09ce92c5a3eab8d75b45fb.jpg",
         menuItems: [
             {
                 id: 1,
@@ -1586,7 +1586,7 @@ const restaurants = [
         cuisine: "Italian",
         rating: 4.7,
         deliveryTime: "30-40 min",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXRhbGlhbiUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+        image: "https://i.pinimg.com/736x/44/dc/6b/44dc6b2f8f29776a439cde6cfa240d79.jpg",
         menuItems: [
             {
                 id: 29,
