@@ -1686,7 +1686,7 @@ const restaurants = [
         cuisine: "Italian",
         rating: 4.7,
         deliveryTime: "30-40 min",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXRhbGlhbiUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+        image: "https://i.pinimg.com/736x/5d/ee/f2/5deef2ad1bb3e9110bd4712b1fe022fd.jpg",
         menuItems: [
             {
                 id: 1,
