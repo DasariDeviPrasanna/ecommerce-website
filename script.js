@@ -1730,7 +1730,7 @@ const restaurants = [
                 category: "nonveg-starters",
                 price: 120,
                 description: "Spicy shawarma with chili garlic sauce",
-                image: "https://i.pinimg.com/1200x/ee/02/18/ee021819d7bc02b987a666dec335bb62.jpg",
+                image: "https://i.pinimg.com/736x/e4/0f/0c/e40f0cd44a706533af924689efffa70a.jpg",
                 feedback: []
             },
             {
