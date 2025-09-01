@@ -1691,7 +1691,7 @@ const restaurants = [
             {
                 id: 1,
                 name: "shawarma with veg salad",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 150,
                 description: "Delicious shawarma served with a fresh vegetable salad",
                 image: "https://i.pinimg.com/736x/d0/7b/86/d07b862fcb60b370657bf0a9564f1ae1.jpg",
@@ -1700,7 +1700,7 @@ const restaurants = [
             {
                 id: 2,
                 name: "Spl.Shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 140,
                 description: "Special shawarma with extra toppings",
                 image: "https://i.pinimg.com/736x/52/bb/92/52bb92cb95e4e611985cb2b927afdca9.jpg",
@@ -1709,7 +1709,7 @@ const restaurants = [
             {
                 id: 3,
                 name: "spl.peri peri spicy shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 160,
                 description: "Spicy shawarma with peri peri sauce",
                 image: "https://i.pinimg.com/736x/26/67/db/2667dbd9df2c1ba54a4ed35659c73236.jpg",
@@ -1718,7 +1718,7 @@ const restaurants = [
             {
                 id: 4,
                 name: "Spicy salty shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 180,
                 description: "spicy shawarma with garlic sauce",
                 image: "https://i.pinimg.com/1200x/16/8e/75/168e75315e1cd2fdeb88c345af729a51.jpg",
@@ -1727,7 +1727,7 @@ const restaurants = [
             {
                 id: 5,
                 name: "chilly garlic shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 120,
                 description: "Spicy shawarma with chili garlic sauce",
                 image: "https://i.pinimg.com/1200x/ee/02/18/ee021819d7bc02b987a666dec335bb62.jpg",
@@ -1736,7 +1736,7 @@ const restaurants = [
             {
                 id: 6,
                 name: "Pizza cheese shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 140,
                 description: "shawarma with cheese made like pizza",
                 image: "https://i.pinimg.com/736x/ba/d3/6d/bad36da4ca0ddfed10deafbe16575f56.jpg",
@@ -1745,7 +1745,7 @@ const restaurants = [
             {
                 id: 7,
                 name: "kaju shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 250,
                 description: "shawarma with cashew nuts",
                 image: "https://i.pinimg.com/1200x/f8/c3/3a/f8c33a8c569571fc7c964d2157530041.jpg",
@@ -1754,7 +1754,7 @@ const restaurants = [
             {
                 id: 8,
                 name: "schezwan sauce shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 280,
                 description: "Spicy shawarma with schezwan sauce",
                 image: "https://i.pinimg.com/1200x/8b/19/4b/8b194bd990b3d283e335d14c9af692ac.jpg",
@@ -1763,7 +1763,7 @@ const restaurants = [
             {
                 id: 9,
                 name: "peri peri shawarma with cheese",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 220,
                 description: "Spicy shawarma with peri peri sauce and cheese",
                 image: "https://i.pinimg.com/736x/be/94/c2/be94c20c385b145df2ba8b6175b2b55a.jpg",
@@ -1772,7 +1772,7 @@ const restaurants = [
             {
                 id: 10,
                 name: "peri peri shawarma with kaju",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 250,
                 description: "spicy shawarma with peri peri sauce and cashew nuts",
                 image: "https://i.pinimg.com/736x/07/c5/45/07c54518cfae69d57d83916874326d4d.jpg",
@@ -1781,7 +1781,7 @@ const restaurants = [
             {
                 id:11,
                 name: "chilli Garlic shawarma with cheese",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 300,
                 description: "Spicy shawarma with chilli garlic sauce and cheese",
                 image: "https://i.pinimg.com/736x/c5/5c/c3/c55cc31778dabfb751a98bca3dae1696.jpg",
@@ -1790,7 +1790,7 @@ const restaurants = [
             {
                 id: 12,
                 name:"chilli garlic shawarma with kaju",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 250,
                 description: "Spicy shawarma with chilli garlic sauce and kaju",
                 image: "https://i.pinimg.com/1200x/31/8e/b4/318eb4a72f14810fc778a8c3887e1fb9.jpg",
@@ -1799,7 +1799,7 @@ const restaurants = [
             {
                 id: 13,
                 name: "shawarma cheese with kaju",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 300,
                 description: "Spicy shawarma with cheese and kaju",
                 image: "https://i.pinimg.com/736x/a6/73/95/a67395911c4468a10319a52eda64f9d7.jpg",
@@ -1808,7 +1808,7 @@ const restaurants = [
             {
                 id: 14,
                 name: "Bingo or Lays shawarma",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 300,
                 description: "Spicy shawarma with Bingo or Lays chips",
                 image: "https://i.pinimg.com/736x/b8/68/1a/b8681a400c51ad1d9a0ee30afc188189.jpg",
@@ -1817,7 +1817,7 @@ const restaurants = [
             {
                 id: 15,
                 name: "peri peri cheese shawarma with kaju",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 300,
                 description: "Spicy shawarma with peri peri sauce and cheese and kaju",
                 image: "https://i.pinimg.com/736x/dc/87/f6/dc87f60fad7820c0bb7bd20395f4ad7f.jpg",
@@ -1826,7 +1826,7 @@ const restaurants = [
             {
                 id: 16,
                 name: "chilli garlic cheese  shawarma with kaju",
-                category: "nonveg",
+                category: "nonveg-starters",
                 price: 250,
                 description: "spicy shawarma with chilli garlic sauce and cheese and kaju",
                 image: "https://i.pinimg.com/736x/14/fd/b1/14fdb1127c5b833bf8018cf60e138579.jpg",
