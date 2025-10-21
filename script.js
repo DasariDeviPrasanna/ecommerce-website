@@ -1014,7 +1014,7 @@ const restaurants = [
                 category: "nonveg-main",
                 price: 120,
                 description: "Light and clear vegetable soup",
-                image: "https://i.pinimg.com/736x/6e/8e/59/6e8e59b31500ec74df637457ae3d1181.jpg",
+                image: "https://i.pinimg.com/1200x/98/89/e8/9889e8b34bde2b63f8c6276e058a26e9.jpg",
                 feedback: []
             },
             {
