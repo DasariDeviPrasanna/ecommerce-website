@@ -1589,8 +1589,8 @@ const restaurants = [
         image: "https://i.pinimg.com/736x/44/dc/6b/44dc6b2f8f29776a439cde6cfa240d79.jpg",
         menuItems: [
             {
-                id: 29,
-                name: "Minestrone Soup",
+                id: 1,
+                name: "veg manchow soup",
                 category: "veg-soups",
                 price: 150,
                 description: "Classic Italian vegetable soup with pasta",
@@ -1598,13 +1598,41 @@ const restaurants = [
                 feedback: []
             },
             {
-                id: 30,
-                name: "Tomato Basil Soup",
+                id: 2,
+                name:"corn soup",
                 category: "veg-soups",
                 price: 140,
                 description: "Creamy tomato soup with fresh basil",
                 image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9tYXRvJTIwYmFzaWwlMjBzb3VwfGVufDB8fDB8fHww&w=1000&q=80",
                 feedback: []
+            },
+            { 
+                id:3,
+                name:"tomato soup",
+                category:"veg-soups",
+                price:140,
+                description:"",
+                image:"",
+                feedback:[]
+
+            },
+            {
+                id:4,
+                name:"lemon soup",
+                category:"veg-soups",
+                price:200,
+                description:"",
+                image:"",
+                feedback:[]
+            },
+            {
+                id:5,
+                name:"",
+                category:"",
+                price:140,
+                description:"",
+                image:"",
+                feedback:[]
             },
             {
                 id: 31,
@@ -1830,6 +1858,236 @@ const restaurants = [
                 price: 250,
                 description: "spicy shawarma with chilli garlic sauce and cheese and kaju",
                 image: "https://i.pinimg.com/736x/14/fd/b1/14fdb1127c5b833bf8018cf60e138579.jpg",
+                feedback: []
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Mama Mia Pizzeria",
+        cuisine: "Italian, Pizza",
+        rating: 4.7,
+        deliveryTime: "25-35 min",
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        menuItems: [
+            {
+                id: 101,
+                name: "Margherita Pizza",
+                category: "pizza",
+                price: 299,
+                description: "Classic pizza with tomato sauce, mozzarella, and fresh basil",
+                image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 102,
+                name: "Pepperoni Pizza",
+                category: "pizza",
+                price: 349,
+                description: "Spicy pepperoni with mozzarella cheese on tomato base",
+                image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 103,
+                name: "Chicken BBQ Pizza",
+                category: "pizza",
+                price: 399,
+                description: "Grilled chicken with BBQ sauce, onions, and mozzarella",
+                image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 104,
+                name: "Vegetarian Supreme",
+                category: "pizza",
+                price: 329,
+                description: "Loaded with bell peppers, mushrooms, onions, olives, and tomatoes",
+                image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "Sushi Master",
+        cuisine: "Japanese, Sushi",
+        rating: 4.8,
+        deliveryTime: "35-45 min",
+        image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        menuItems: [
+            {
+                id: 201,
+                name: "California Roll",
+                category: "sushi",
+                price: 199,
+                description: "Crab, avocado, and cucumber roll with sesame seeds",
+                image: "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 202,
+                name: "Salmon Nigiri",
+                category: "sushi",
+                price: 249,
+                description: "Fresh salmon slices over seasoned rice",
+                image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 203,
+                name: "Dragon Roll",
+                category: "sushi",
+                price: 299,
+                description: "Eel and cucumber roll topped with avocado and eel sauce",
+                image: "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 204,
+                name: "Miso Soup",
+                category: "soup",
+                price: 99,
+                description: "Traditional Japanese soup with tofu and seaweed",
+                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            }
+        ]
+    },
+    {
+        id: 4,
+        name: "Burger Junction",
+        cuisine: "American, Burgers",
+        rating: 4.6,
+        deliveryTime: "20-30 min",
+        image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        menuItems: [
+            {
+                id: 301,
+                name: "Classic Beef Burger",
+                category: "burgers",
+                price: 199,
+                description: "Juicy beef patty with lettuce, tomato, onion, and special sauce",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 302,
+                name: "Chicken Deluxe",
+                category: "burgers",
+                price: 179,
+                description: "Grilled chicken breast with cheese, bacon, and BBQ sauce",
+                image: "https://images.unsplash.com/photo-1606755962773-d324e9c8b1c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 303,
+                name: "Veggie Supreme",
+                category: "burgers",
+                price: 159,
+                description: "Plant-based patty with avocado, sprouts, and vegan mayo",
+                image: "https://images.unsplash.com/photo-1525059696034-4967a729002e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 304,
+                name: "Loaded Fries",
+                category: "sides",
+                price: 129,
+                description: "Crispy fries topped with cheese, bacon, and jalapeños",
+                image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            }
+        ]
+    },
+    {
+        id: 5,
+        name: "Thai Garden",
+        cuisine: "Thai, Asian",
+        rating: 4.4,
+        deliveryTime: "30-40 min",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        menuItems: [
+            {
+                id: 401,
+                name: "Pad Thai",
+                category: "noodles",
+                price: 229,
+                description: "Stir-fried rice noodles with shrimp, tofu, and tamarind sauce",
+                image: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 402,
+                name: "Green Curry",
+                category: "curry",
+                price: 199,
+                description: "Spicy coconut curry with chicken and Thai vegetables",
+                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 403,
+                name: "Tom Yum Soup",
+                category: "soup",
+                price: 149,
+                description: "Hot and sour soup with shrimp, mushrooms, and lemongrass",
+                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 404,
+                name: "Mango Sticky Rice",
+                category: "dessert",
+                price: 119,
+                description: "Sweet sticky rice with fresh mango and coconut milk",
+                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            }
+        ]
+    },
+    {
+        id: 6,
+        name: "Mexican Fiesta",
+        cuisine: "Mexican, Tex-Mex",
+        rating: 4.3,
+        deliveryTime: "25-35 min",
+        image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        menuItems: [
+            {
+                id: 501,
+                name: "Chicken Burrito",
+                category: "burritos",
+                price: 189,
+                description: "Grilled chicken with rice, beans, cheese, and salsa wrapped in tortilla",
+                image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 502,
+                name: "Beef Tacos",
+                category: "tacos",
+                price: 149,
+                description: "Three soft tacos with seasoned beef, lettuce, cheese, and sour cream",
+                image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 503,
+                name: "Chicken Quesadilla",
+                category: "quesadillas",
+                price: 169,
+                description: "Grilled tortilla with chicken, cheese, and peppers",
+                image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                feedback: []
+            },
+            {
+                id: 504,
+                name: "Guacamole & Chips",
+                category: "appetizers",
+                price: 99,
+                description: "Fresh guacamole with crispy tortilla chips",
+                image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 feedback: []
             }
         ]
@@ -2404,7 +2662,7 @@ function openProductModal(itemId) {
         addOrderNowButton(item, restaurant);
         
         // Load reviews from localStorage
-        loadReviewsFromLocalStorage(itemId);
+        loadReviewsAndDisplay(itemId);
         
         // Show the modal
         if (productModal) {
@@ -2455,7 +2713,7 @@ function openProductModal(itemId) {
                         document.getElementById('feedbackText').value = '';
                         resetStars();
                         showNotification('Review submitted successfully!');
-                        loadReviewsFromLocalStorage(productId);
+                        loadReviewsAndDisplay(productId);
                     } catch (error) {
                         showNotification('Failed to submit review. Please try again.');
                     }
@@ -3623,8 +3881,54 @@ function displayFeedback(feedback) {
     `).join('');
 }
 
-// Function to save review to localStorage
-function saveReview(productId, review) {
+// Google Sheets API configuration
+const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbx3ZK_93e_hJYwulWauKSbUu4ogYcIIX_BQomukVRcehbpzlDAMDiI_hsWTeIwr7w_WJg/exec'; // Replace with your deployed web app URL
+
+// Function to save review to Google Sheets
+async function saveReviewToGoogleSheets(productId, review) {
+    try {
+        const reviewData = {
+            action: 'submitReview',
+            productId: productId,
+            userId: currentUser ? currentUser.id : 1,
+            username: currentUser ? currentUser.name : 'Anonymous',
+            rating: review.rating,
+            reviewText: review.text
+        };
+
+        const response = await fetch(GOOGLE_SHEETS_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(reviewData)
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+            console.log('✅ Review saved to Google Sheets:', result);
+            return {
+                id: result.reviewId,
+                productId: productId,
+                userId: reviewData.userId,
+                username: reviewData.username,
+                rating: review.rating,
+                reviewText: review.text,
+                created_at: new Date().toISOString()
+            };
+        } else {
+            throw new Error(result.error || 'Failed to save review');
+        }
+    } catch (error) {
+        console.error('❌ Error saving review to Google Sheets:', error);
+        // Fallback to localStorage if Google Sheets fails
+        return saveReviewToLocalStorage(productId, review);
+    }
+}
+
+// Function to save review to localStorage (fallback)
+function saveReviewToLocalStorage(productId, review) {
     try {
         // Get existing reviews from localStorage
         const existingReviews = JSON.parse(localStorage.getItem('reviews') || '[]');
@@ -3644,12 +3948,53 @@ function saveReview(productId, review) {
         
         return newReview;
     } catch (error) {
-        console.error('Error saving review:', error);
+        console.error('Error saving review to localStorage:', error);
         throw error;
     }
 }
 
-// Function to load reviews from localStorage
+// Function to save review (main function that tries Google Sheets first)
+async function saveReview(productId, review) {
+    try {
+        // Try Google Sheets first
+        return await saveReviewToGoogleSheets(productId, review);
+    } catch (error) {
+        console.error('Google Sheets failed, falling back to localStorage:', error);
+        return saveReviewToLocalStorage(productId, review);
+    }
+}
+
+// Function to load reviews from Google Sheets
+async function loadReviewsFromGoogleSheets(productId) {
+    try {
+        const response = await fetch(`${GOOGLE_SHEETS_API_URL}?action=getReviews&productId=${productId}`);
+        const result = await response.json();
+        
+        if (result.success) {
+            console.log('✅ Reviews loaded from Google Sheets:', result.reviews);
+            return result.reviews;
+        } else {
+            throw new Error(result.error || 'Failed to load reviews');
+        }
+    } catch (error) {
+        console.error('❌ Error loading reviews from Google Sheets:', error);
+        throw error;
+    }
+}
+
+// Function to load reviews (main function that tries Google Sheets first)
+async function loadReviews(productId) {
+    try {
+        // Try Google Sheets first
+        const reviews = await loadReviewsFromGoogleSheets(productId);
+        return reviews;
+    } catch (error) {
+        console.error('Google Sheets failed, falling back to localStorage:', error);
+        return loadReviewsFromLocalStorage(productId);
+    }
+}
+
+// Function to load reviews from localStorage (fallback)
 function loadReviewsFromLocalStorage(productId) {
     try {
         console.log('📥 Loading reviews from localStorage for product:', productId);
@@ -3658,18 +4003,30 @@ function loadReviewsFromLocalStorage(productId) {
         const productReviews = reviews.filter(review => review.productId === productId);
         
         console.log('✅ Reviews loaded from localStorage:', productReviews);
+        return productReviews;
+        
+    } catch (error) {
+        console.error('❌ Error loading reviews from localStorage:', error);
+        return [];
+    }
+}
+
+// Function to load reviews and display them
+async function loadReviewsAndDisplay(productId) {
+    try {
+        const reviews = await loadReviews(productId);
         
         // Update the feedback display
-        displayFeedbackFromDatabase(productReviews);
+        displayFeedbackFromDatabase(reviews);
         
         // Update the rating display
-        const averageRating = productReviews.length > 0 
-            ? productReviews.reduce((sum, review) => sum + review.rating, 0) / productReviews.length 
+        const averageRating = reviews.length > 0 
+            ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length 
             : 0;
         updateRatingDisplay(averageRating);
         
     } catch (error) {
-        console.error('❌ Error loading reviews from localStorage:', error);
+        console.error('❌ Error loading reviews:', error);
         
         // Set default rating and empty feedback on error
         updateRatingDisplay(0);
@@ -4550,39 +4907,34 @@ document.getElementById('submitFeedback').addEventListener('click', function() {
     
     console.log('✅ Submitting review with rating:', rating);
     
-    try {
-        // Save review to localStorage instead of database
-        const review = {
-            id: Date.now(),
-            productId: productId,
-            userId: currentUser.id,
-            username: currentUser.name,
-            rating: rating,
-            reviewText: feedbackText,
-            created_at: new Date().toISOString()
-        };
-        
-        // Get existing reviews from localStorage
-        const existingReviews = JSON.parse(localStorage.getItem('reviews') || '[]');
-        existingReviews.push(review);
-        localStorage.setItem('reviews', JSON.stringify(existingReviews));
-        
-        console.log('✅ Review saved locally:', review);
-        
-        // Clear the form
-        document.getElementById('feedbackText').value = '';
-        resetStars();
-        
-        // Show success message
-        showNotification('Review submitted successfully!');
-        
-        // Reload reviews from localStorage
-        loadReviewsFromLocalStorage(productId);
-        
-    } catch (error) {
-        console.error('❌ Review submission error:', error);
-        showNotification('Failed to submit review. Please try again.');
-    }
+    // Make the function async to handle the saveReview promise
+    (async () => {
+        try {
+            const review = {
+                rating: rating,
+                text: feedbackText
+            };
+            
+            // Save review using the new function (tries Google Sheets first, falls back to localStorage)
+            const savedReview = await saveReview(productId, review);
+            
+            console.log('✅ Review saved:', savedReview);
+            
+            // Clear the form
+            document.getElementById('feedbackText').value = '';
+            resetStars();
+            
+            // Show success message
+            showNotification('Review submitted successfully!');
+            
+            // Reload reviews
+            loadReviewsAndDisplay(productId);
+            
+        } catch (error) {
+            console.error('❌ Review submission error:', error);
+            showNotification('Failed to submit review. Please try again.');
+        }
+    })();
 });
 
 function addToCartFromSearch(itemId, restaurantName) {
