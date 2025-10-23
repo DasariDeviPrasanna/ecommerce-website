@@ -3882,16 +3882,11 @@ function displayFeedback(feedback) {
 }
 
 // Google Sheets API configuration
-const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbx3ZK_93e_hJYwulWauKSbUu4ogYcIIX_BQomukVRcehbpzlDAMDiI_hsWTeIwr7w_WJg/exec'; // Disabled - using localStorage only
+const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbx3ZK_93e_hJYwulWauKSbUu4ogYcIIX_BQomukVRcehbpzlDAMDiI_hsWTeIwr7w_WJg/exec'; // Google Sheets API URL
 
 // Function to save review to Google Sheets
 async function saveReviewToGoogleSheets(productId, review) {
     try {
-        // Check if Google Sheets is disabled
-        if (!GOOGLE_SHEETS_API_URL) {
-            throw new Error('Google Sheets integration disabled');
-        }
-
         const reviewData = {
             action: 'submitReview',
             productId: productId,
@@ -3972,11 +3967,6 @@ async function saveReview(productId, review) {
 // Function to load reviews from Google Sheets
 async function loadReviewsFromGoogleSheets(productId) {
     try {
-        // Check if Google Sheets is disabled
-        if (!GOOGLE_SHEETS_API_URL) {
-            throw new Error('Google Sheets integration disabled');
-        }
-
         const response = await fetch(`${GOOGLE_SHEETS_API_URL}?action=getReviews&productId=${productId}`);
         const result = await response.json();
         

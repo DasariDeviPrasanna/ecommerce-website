@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Sheets Test</title>
+</head>
+<body>
+    <h1>Google Sheets API Test</h1>
+    <button onclick="testGoogleSheets()">Test Google Sheets Connection</button>
+    <div id="result"></div>
+
+    <script>
+        const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbx3ZK_93e_hJYwulWauKSbUu4ogYcIIX_BQomukVRcehbpzlDAMDiI_hsWTeIwr7w_WJg/exec';
+
+        async function testGoogleSheets() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing...';
+            
+            try {
+                const testData = {
+                    action: 'submitReview',
+                    productId: 999,
+                    userId: 1,
+                    username: 'Test User',
+                    rating: 5,
+                    reviewText: 'This is a test review'
+                };
+
+                console.log('Sending data:', testData);
+
+                const response = await fetch(GOOGLE_SHEETS_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+
+                const result = await response.json();
+                console.log('Response:', result);
+                
+                resultDiv.innerHTML = `
+                    <h3>Test Result:</h3>
+                    <p><strong>Success:</strong> ${result.success}</p>
+                    <p><strong>Message:</strong> ${result.message || result.error || 'No message'}</p>
+                    <pre>${JSON.stringify(result, null, 2)}</pre>
+                `;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `
+                    <h3>Error:</h3>
+                    <p style="color: red;">${error.message}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
