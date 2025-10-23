@@ -3881,55 +3881,11 @@ function displayFeedback(feedback) {
     `).join('');
 }
 
-// Google Sheets API configuration
-const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbx3ZK_93e_hJYwulWauKSbUu4ogYcIIX_BQomukVRcehbpzlDAMDiI_hsWTeIwr7w_WJg/exec'; // Google Sheets API URL
-
-// Function to save review to Google Sheets
-async function saveReviewToGoogleSheets(productId, review) {
+// Function to save review to localStorage
+function saveReview(productId, review) {
     try {
-        const reviewData = {
-            action: 'submitReview',
-            productId: productId,
-            userId: currentUser ? currentUser.id : 1,
-            username: currentUser ? currentUser.name : 'Anonymous',
-            rating: review.rating,
-            reviewText: review.text
-        };
-
-        const response = await fetch(GOOGLE_SHEETS_API_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(reviewData)
-        });
-
-        const result = await response.json();
+        console.log('💾 Saving review to localStorage...');
         
-        if (result.success) {
-            console.log('✅ Review saved to Google Sheets:', result);
-            return {
-                id: result.reviewId,
-                productId: productId,
-                userId: reviewData.userId,
-                username: reviewData.username,
-                rating: review.rating,
-                reviewText: review.text,
-                created_at: new Date().toISOString()
-            };
-        } else {
-            throw new Error(result.error || 'Failed to save review');
-        }
-    } catch (error) {
-        console.error('❌ Error saving review to Google Sheets:', error);
-        // Fallback to localStorage if Google Sheets fails
-        return saveReviewToLocalStorage(productId, review);
-    }
-}
-
-// Function to save review to localStorage (fallback)
-function saveReviewToLocalStorage(productId, review) {
-    try {
         // Get existing reviews from localStorage
         const existingReviews = JSON.parse(localStorage.getItem('reviews') || '[]');
         
@@ -3946,56 +3902,17 @@ function saveReviewToLocalStorage(productId, review) {
         existingReviews.push(newReview);
         localStorage.setItem('reviews', JSON.stringify(existingReviews));
         
+        console.log('✅ Review saved to localStorage:', newReview);
         return newReview;
-    } catch (error) {
-        console.error('Error saving review to localStorage:', error);
-        throw error;
-    }
-}
-
-// Function to save review (main function that tries Google Sheets first)
-async function saveReview(productId, review) {
-    try {
-        // Try Google Sheets first
-        return await saveReviewToGoogleSheets(productId, review);
-    } catch (error) {
-        console.error('Google Sheets failed, falling back to localStorage:', error);
-        return saveReviewToLocalStorage(productId, review);
-    }
-}
-
-// Function to load reviews from Google Sheets
-async function loadReviewsFromGoogleSheets(productId) {
-    try {
-        const response = await fetch(`${GOOGLE_SHEETS_API_URL}?action=getReviews&productId=${productId}`);
-        const result = await response.json();
         
-        if (result.success) {
-            console.log('✅ Reviews loaded from Google Sheets:', result.reviews);
-            return result.reviews;
-        } else {
-            throw new Error(result.error || 'Failed to load reviews');
-        }
     } catch (error) {
-        console.error('❌ Error loading reviews from Google Sheets:', error);
+        console.error('❌ Error saving review to localStorage:', error);
         throw error;
     }
 }
 
-// Function to load reviews (main function that tries Google Sheets first)
-async function loadReviews(productId) {
-    try {
-        // Try Google Sheets first
-        const reviews = await loadReviewsFromGoogleSheets(productId);
-        return reviews;
-    } catch (error) {
-        console.error('Google Sheets failed, falling back to localStorage:', error);
-        return loadReviewsFromLocalStorage(productId);
-    }
-}
-
-// Function to load reviews from localStorage (fallback)
-function loadReviewsFromLocalStorage(productId) {
+// Function to load reviews from localStorage
+function loadReviews(productId) {
     try {
         console.log('📥 Loading reviews from localStorage for product:', productId);
         
@@ -4012,9 +3929,9 @@ function loadReviewsFromLocalStorage(productId) {
 }
 
 // Function to load reviews and display them
-async function loadReviewsAndDisplay(productId) {
+function loadReviewsAndDisplay(productId) {
     try {
-        const reviews = await loadReviews(productId);
+        const reviews = loadReviews(productId);
         
         // Update the feedback display
         displayFeedbackFromDatabase(reviews);
@@ -4907,34 +4824,34 @@ document.getElementById('submitFeedback').addEventListener('click', function() {
     
     console.log('✅ Submitting review with rating:', rating);
     
-    // Make the function async to handle the saveReview promise
-    (async () => {
-        try {
-            const review = {
-                rating: rating,
-                text: feedbackText
-            };
-            
-            // Save review using the new function (tries Google Sheets first, falls back to localStorage)
-            const savedReview = await saveReview(productId, review);
-            
-            console.log('✅ Review saved:', savedReview);
-            
-            // Clear the form
-            document.getElementById('feedbackText').value = '';
-            resetStars();
-            
-            // Show success message
-            showNotification('Review submitted successfully!');
-            
-            // Reload reviews
-            loadReviewsAndDisplay(productId);
-            
-        } catch (error) {
-            console.error('❌ Review submission error:', error);
-            showNotification('Failed to submit review. Please try again.');
-        }
-    })();
+    // Submit the review
+    try {
+        const review = {
+            rating: rating,
+            text: feedbackText
+        };
+        
+        console.log('🔄 Attempting to save review:', review);
+        
+        // Save review to localStorage
+        const savedReview = saveReview(productId, review);
+        
+        console.log('✅ Review saved successfully:', savedReview);
+        
+        // Clear the form
+        document.getElementById('feedbackText').value = '';
+        resetStars();
+        
+        // Show success message
+        showNotification('Review submitted successfully!');
+        
+        // Reload reviews
+        loadReviewsAndDisplay(productId);
+        
+    } catch (error) {
+        console.error('❌ Review submission error:', error);
+        showNotification('Failed to submit review. Please try again.');
+    }
 });
 
 function addToCartFromSearch(itemId, restaurantName) {
