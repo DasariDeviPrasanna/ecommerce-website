@@ -329,7 +329,7 @@ const restaurants = [
                 category: "desserts",
                 price: 150,
                 description: "Stir-fried noodles with mixed vegetables",
-                image:"https://i.pinimg.com/736x/41/c7/bf/41c7bf3422cff4a9ac1fb49f4d545513.jpg",
+                image:"",
                 feedback: []
             },
             {
@@ -401,7 +401,7 @@ const restaurants = [
                 category: "veg-soups",
                 price: 120,
                 description: "Classic tomato soup with herbs and croutons",
-                image: "https://i.pinimg.com/736x/49/6f/79/496f79b0521d55cc214a914fe55641ed.jpg",
+                image: "",
                 feedback: []
             },
             {
@@ -1074,7 +1074,7 @@ const restaurants = [
             {
                 id: 39,
                 name: "gulabjamun icecream",
-                category: "desserts",
+                category: "ice-creams",
                 price: 120,
                 description: "Light and clear vegetable soup",
                 image: "https://i.pinimg.com/736x/f6/bd/6e/f6bd6eabb38924687ef4c5daf66f5c14.jpg",
@@ -1719,7 +1719,7 @@ const restaurants = [
             {
                 id: 1,
                 name: "shawarma with veg salad",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 150,
                 description: "Delicious shawarma served with a fresh vegetable salad",
                 image: "https://i.pinimg.com/736x/d0/7b/86/d07b862fcb60b370657bf0a9564f1ae1.jpg",
@@ -1728,7 +1728,7 @@ const restaurants = [
             {
                 id: 2,
                 name: "Spl.Shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 140,
                 description: "Special shawarma with extra toppings",
                 image: "https://i.pinimg.com/736x/52/bb/92/52bb92cb95e4e611985cb2b927afdca9.jpg",
@@ -1737,7 +1737,7 @@ const restaurants = [
             {
                 id: 3,
                 name: "spl.peri peri spicy shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 160,
                 description: "Spicy shawarma with peri peri sauce",
                 image: "https://i.pinimg.com/736x/26/67/db/2667dbd9df2c1ba54a4ed35659c73236.jpg",
@@ -1746,7 +1746,7 @@ const restaurants = [
             {
                 id: 4,
                 name: "Spicy salty shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 180,
                 description: "spicy shawarma with garlic sauce",
                 image: "https://i.pinimg.com/1200x/16/8e/75/168e75315e1cd2fdeb88c345af729a51.jpg",
@@ -1755,7 +1755,7 @@ const restaurants = [
             {
                 id: 5,
                 name: "chilly garlic shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 120,
                 description: "Spicy shawarma with chili garlic sauce",
                 image: "https://i.pinimg.com/736x/e4/0f/0c/e40f0cd44a706533af924689efffa70a.jpg",
@@ -1764,7 +1764,7 @@ const restaurants = [
             {
                 id: 6,
                 name: "Pizza cheese shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 140,
                 description: "shawarma with cheese made like pizza",
                 image: "https://i.pinimg.com/736x/ba/d3/6d/bad36da4ca0ddfed10deafbe16575f56.jpg",
@@ -1773,7 +1773,7 @@ const restaurants = [
             {
                 id: 7,
                 name: "kaju shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 250,
                 description: "shawarma with cashew nuts",
                 image: "https://i.pinimg.com/1200x/f8/c3/3a/f8c33a8c569571fc7c964d2157530041.jpg",
@@ -1782,7 +1782,7 @@ const restaurants = [
             {
                 id: 8,
                 name: "schezwan sauce shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 280,
                 description: "Spicy shawarma with schezwan sauce",
                 image: "https://i.pinimg.com/1200x/8b/19/4b/8b194bd990b3d283e335d14c9af692ac.jpg",
@@ -1791,7 +1791,7 @@ const restaurants = [
             {
                 id: 9,
                 name: "peri peri shawarma with cheese",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 220,
                 description: "Spicy shawarma with peri peri sauce and cheese",
                 image: "https://i.pinimg.com/736x/be/94/c2/be94c20c385b145df2ba8b6175b2b55a.jpg",
@@ -1800,7 +1800,7 @@ const restaurants = [
             {
                 id: 10,
                 name: "peri peri shawarma with kaju",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 250,
                 description: "spicy shawarma with peri peri sauce and cashew nuts",
                 image: "https://i.pinimg.com/736x/07/c5/45/07c54518cfae69d57d83916874326d4d.jpg",
@@ -1809,7 +1809,7 @@ const restaurants = [
             {
                 id:11,
                 name: "chilli Garlic shawarma with cheese",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 300,
                 description: "Spicy shawarma with chilli garlic sauce and cheese",
                 image: "https://i.pinimg.com/736x/c5/5c/c3/c55cc31778dabfb751a98bca3dae1696.jpg",
@@ -1818,7 +1818,7 @@ const restaurants = [
             {
                 id: 12,
                 name:"chilli garlic shawarma with kaju",
-                category: "nonveg-starters",
+                category: "shawarma-platters",
                 price: 250,
                 description: "Spicy shawarma with chilli garlic sauce and kaju",
                 image: "https://i.pinimg.com/1200x/31/8e/b4/318eb4a72f14810fc778a8c3887e1fb9.jpg",
@@ -1827,7 +1827,7 @@ const restaurants = [
             {
                 id: 13,
                 name: "shawarma cheese with kaju",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 300,
                 description: "Spicy shawarma with cheese and kaju",
                 image: "https://i.pinimg.com/736x/a6/73/95/a67395911c4468a10319a52eda64f9d7.jpg",
@@ -1836,7 +1836,7 @@ const restaurants = [
             {
                 id: 14,
                 name: "Bingo or Lays shawarma",
-                category: "nonveg-starters",
+                category: "shawarma-wraps",
                 price: 300,
                 description: "Spicy shawarma with Bingo or Lays chips",
                 image: "https://i.pinimg.com/736x/b8/68/1a/b8681a400c51ad1d9a0ee30afc188189.jpg",
@@ -1845,7 +1845,7 @@ const restaurants = [
             {
                 id: 15,
                 name: "peri peri cheese shawarma with kaju",
-                category: "nonveg-starters",
+                category: "shawarma-platters",
                 price: 300,
                 description: "Spicy shawarma with peri peri sauce and cheese and kaju",
                 image: "https://i.pinimg.com/736x/dc/87/f6/dc87f60fad7820c0bb7bd20395f4ad7f.jpg",
@@ -1854,7 +1854,7 @@ const restaurants = [
             {
                 id: 16,
                 name: "chilli garlic cheese  shawarma with kaju",
-                category: "nonveg-starters",
+                category: "shawarma-Wraps",
                 price: 250,
                 description: "spicy shawarma with chilli garlic sauce and cheese and kaju",
                 image: "https://i.pinimg.com/736x/14/fd/b1/14fdb1127c5b833bf8018cf60e138579.jpg",
@@ -1863,233 +1863,248 @@ const restaurants = [
         ]
     },
     {
-        id: 2,
-        name: "Mama Mia Pizzeria",
+        id: 6,
+        name: "Cofezzzz",
         cuisine: "Italian, Pizza",
         rating: 4.7,
         deliveryTime: "25-35 min",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        image: "https://i.pinimg.com/736x/cd/d7/85/cdd785fdddac0c3039323c3b015766c5.jpg",
         menuItems: [
             {
-                id: 101,
-                name: "Margherita Pizza",
-                category: "pizza",
-                price: 299,
-                description: "Classic pizza with tomato sauce, mozzarella, and fresh basil",
-                image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 102,
-                name: "Pepperoni Pizza",
-                category: "pizza",
-                price: 349,
-                description: "Spicy pepperoni with mozzarella cheese on tomato base",
-                image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 103,
-                name: "Chicken BBQ Pizza",
-                category: "pizza",
-                price: 399,
-                description: "Grilled chicken with BBQ sauce, onions, and mozzarella",
-                image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 104,
-                name: "Vegetarian Supreme",
-                category: "pizza",
-                price: 329,
-                description: "Loaded with bell peppers, mushrooms, onions, olives, and tomatoes",
-                image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            }
-        ]
-    },
-    {
-        id: 3,
-        name: "Sushi Master",
-        cuisine: "Japanese, Sushi",
-        rating: 4.8,
-        deliveryTime: "35-45 min",
-        image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        menuItems: [
-            {
-                id: 201,
-                name: "California Roll",
-                category: "sushi",
-                price: 199,
-                description: "Crab, avocado, and cucumber roll with sesame seeds",
-                image: "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 202,
-                name: "Salmon Nigiri",
-                category: "sushi",
-                price: 249,
-                description: "Fresh salmon slices over seasoned rice",
-                image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 203,
-                name: "Dragon Roll",
-                category: "sushi",
-                price: 299,
-                description: "Eel and cucumber roll topped with avocado and eel sauce",
-                image: "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 204,
-                name: "Miso Soup",
-                category: "soup",
-                price: 99,
-                description: "Traditional Japanese soup with tofu and seaweed",
-                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            }
-        ]
-    },
-    {
-        id: 4,
-        name: "Burger Junction",
-        cuisine: "American, Burgers",
-        rating: 4.6,
-        deliveryTime: "20-30 min",
-        image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        menuItems: [
-            {
-                id: 301,
-                name: "Classic Beef Burger",
-                category: "burgers",
-                price: 199,
-                description: "Juicy beef patty with lettuce, tomato, onion, and special sauce",
-                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 302,
-                name: "Chicken Deluxe",
-                category: "burgers",
-                price: 179,
-                description: "Grilled chicken breast with cheese, bacon, and BBQ sauce",
-                image: "https://images.unsplash.com/photo-1606755962773-d324e9c8b1c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 303,
-                name: "Veggie Supreme",
-                category: "burgers",
-                price: 159,
-                description: "Plant-based patty with avocado, sprouts, and vegan mayo",
-                image: "https://images.unsplash.com/photo-1525059696034-4967a729002e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 304,
-                name: "Loaded Fries",
-                category: "sides",
+                id: 1,
+                name: "veg burger",
+                category: "fastfood-burgers",
                 price: 129,
-                description: "Crispy fries topped with cheese, bacon, and jalapeños",
-                image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            }
-        ]
-    },
-    {
-        id: 5,
-        name: "Thai Garden",
-        cuisine: "Thai, Asian",
-        rating: 4.4,
-        deliveryTime: "30-40 min",
-        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        menuItems: [
-            {
-                id: 401,
-                name: "Pad Thai",
-                category: "noodles",
-                price: 229,
-                description: "Stir-fried rice noodles with shrimp, tofu, and tamarind sauce",
-                image: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                description: "Delicious veg burger with fresh vegetables and cheese",
+                image: "https://i.pinimg.com/736x/91/af/93/91af9363bf0dc5a730125e7bbb5d1f69.jpg",
                 feedback: []
             },
             {
-                id: 402,
-                name: "Green Curry",
-                category: "curry",
+                id: 2,
+                name: "veg classic burger",
+                category: "fastfood-burgers",
+                price: 149,
+                description: "Spicy classic burger with lettuce, tomato, and cheese",
+                image: "https://i.pinimg.com/736x/c9/c5/01/c9c5013a47c78dde12d22a8659cdb945.jpg",
+                feedback: []
+            },
+            {
+                id: 3,
+                name: "panner burger",
+                category: "fastfood-burgers",
                 price: 199,
-                description: "Spicy coconut curry with chicken and Thai vegetables",
-                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                description: "Grilled panner with BBQ sauce, onions, and mozzarella",
+                image: "https://i.pinimg.com/1200x/5b/f6/15/5bf615eb5f2e0796fb98c5f22a77a744.jpg",
                 feedback: []
             },
             {
-                id: 403,
-                name: "Tom Yum Soup",
-                category: "soup",
-                price: 149,
-                description: "Hot and sour soup with shrimp, mushrooms, and lemongrass",
-                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                id: 4,
+                name: "panner classic burger",
+                category: "fastfood-burgers",
+                price: 229,
+                description: "Spicy panner burger with lettuce, tomato, and cheese",
+                image: "https://i.pinimg.com/736x/ac/18/6a/ac186ab06fbe4d53a98cdfd8a99c60ca.jpg",
                 feedback: []
             },
             {
-                id: 404,
-                name: "Mango Sticky Rice",
-                category: "dessert",
-                price: 119,
-                description: "Sweet sticky rice with fresh mango and coconut milk",
-                image: "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            }
-        ]
-    },
-    {
-        id: 6,
-        name: "Mexican Fiesta",
-        cuisine: "Mexican, Tex-Mex",
-        rating: 4.3,
-        deliveryTime: "25-35 min",
-        image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        menuItems: [
-            {
-                id: 501,
-                name: "Chicken Burrito",
-                category: "burritos",
-                price: 189,
-                description: "Grilled chicken with rice, beans, cheese, and salsa wrapped in tortilla",
-                image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                id: 5,
+                name: "chicken burger",
+                category: "fastfood-burgers",
+                price: 249,
+                description: "Juicy chicken patty with lettuce, tomato, onion, and special sauce",
+                image: "https://i.pinimg.com/736x/66/d4/a3/66d4a3a676ef463d93f04769e46117af.jpg",
                 feedback: []
             },
             {
-                id: 502,
-                name: "Beef Tacos",
-                category: "tacos",
-                price: 149,
-                description: "Three soft tacos with seasoned beef, lettuce, cheese, and sour cream",
-                image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                id: 6,
+                name: "chicken classic burger",
+                category: "fastfood-burgers",   
+                price: 269,
+                description: "Classic chicken burger with lettuce, tomato, and mayo",
+                image: "https://i.pinimg.com/736x/a1/19/11/a119118a836778dfd59fba2c99fa9619.jpg",
                 feedback: []
             },
             {
-                id: 503,
-                name: "Chicken Quesadilla",
-                category: "quesadillas",
-                price: 169,
-                description: "Grilled tortilla with chicken, cheese, and peppers",
-                image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                feedback: []
-            },
-            {
-                id: 504,
-                name: "Guacamole & Chips",
-                category: "appetizers",
+                id: 7,
+                name: "Sweet corn Sandwich",
+                category: "fastfood-sandwiches",
                 price: 99,
-                description: "Fresh guacamole with crispy tortilla chips",
-                image: "https://images.unsplash.com/photo-1565299585323-38174c4aabaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                description: "Delicious sandwich filled with sweet corn and cheese",
+                image: "https://i.pinimg.com/1200x/3d/06/2d/3d062d6fb89802eb274f8ebd29a26b37.jpg",
+                feedback: []
+            },
+            {
+                id: 8,
+                name: "panner Sandwich",
+                category: "fastfood-sandwiches",
+                price: 129,
+                description: "Grilled sandwich with mixed vegetables and cheese",
+                image: "https://i.pinimg.com/736x/1e/24/b1/1e24b193366d5bf94458cb422e520f36.jpg",
+                feedback: []
+            },
+            {
+                id: 9,
+                name: "chicken Sandwich",
+                category: "fastfood-sandwiches",
+                price: 149,
+                description: "Grilled chicken sandwich with lettuce, tomato, and mayo",
+                image: "https://i.pinimg.com/1200x/c0/7f/d5/c07fd509ed6a0e23950d24360fb54daa.jpg",
+                feedback: []
+            },
+            {
+                id: 10,
+                name: "mixed veg Sandwich",
+                category: "fastfood-sandwiches",
+                price: 129,
+                description: "Grilled sandwich with mixed vegetables and cheese",
+                image: "https://i.pinimg.com/1200x/e8/36/35/e836358089d9710dd09cb98cc904c542.jpg",
+                feedback: []
+            },
+            {
+                id: 11,
+                name: "chicken cheese Sandwich",
+                category: "fastfood-sandwiches",
+                price: 149,
+                description: "Grilled chicken sandwich with cheese, lettuce, and mayo",
+                image: "https://i.pinimg.com/1200x/62/49/06/6249066162227b15836f7ae48045f0e3.jpg",
+                feedback: []    
+            },
+            {
+                id: 12,
+                name: "Corn Pizza",
+                category: "fastfood-pizza",
+                price: 299,
+                description: "Delicious pizza topped with sweet corn and cheese",
+                image: "https://i.pinimg.com/736x/44/52/a3/4452a328eccd4758957578ab74e9fa48.jpg",
+                feedback: []
+            },
+            {
+                id: 13,
+                name: "Mushroom Pizza",
+                category: "fastfood-pizza",
+                price: 299,
+                description: "Delicious pizza topped with mushrooms and cheese",
+                image: "https://i.pinimg.com/736x/2f/42/32/2f4232bb9a4d943341877138a120070a.jpg",
+                feedback: []
+            },
+            {
+                id: 14,
+                name: "Paneer Pizza",
+                category: "fastfood-pizza",
+                price: 299,
+                description: "Delicious pizza topped with paneer and cheese",
+                image: "https://i.pinimg.com/736x/d2/09/bb/d209bb7bdfeb88a744ded9509d0eeab4.jpg",
+                feedback: []
+            },
+            {
+                id: 15,
+                name: "Chicken Pizza",
+                category: "fastfood-pizza",
+                price: 299,
+                description: "Delicious pizza topped with chicken and cheese",
+                image: "https://i.pinimg.com/736x/e4/45/3b/e4453bf0971059dc5bbeca37665bd78d.jpg",
+                feedback: []
+            },
+            {
+                id: 16,
+                name:"paneer shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious paneer shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/736x/e7/d0/f3/e7d0f3619ffdb3f876cfcfff8c6d5018.jpg",
+                feedback: []
+            },
+            {
+                id: 17,
+                name: "Regular chicken shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious chicken shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/736x/3d/e7/66/3de7660996a24057fb50f57b3e0b1f16.jpg",
+                feedback: []
+            },
+            {
+                id: 18,
+                name: "Special chicken shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious special chicken shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/1200x/49/e5/74/49e574a97f8e3e42e755fe9279713524.jpg",
+                feedback: []
+            },
+            {
+                id: 19,
+                name: "peri peri shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious peri peri chicken shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/736x/09/7b/29/097b2957e1b0393b16814e7be5a4905f.jpg",
+                feedback: []
+            },
+            {
+                id: 20,
+                name: "Schezwan shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious Schezwan chicken shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/736x/9a/1f/ff/9a1fff910649f3991e865a85909053ce.jpg",
+                feedback: []
+            },
+            {
+                id: 21,
+                name: "tandoori shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious tandoori chicken shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/736x/c1/ab/19/c1ab1953c33a873804dac5a1a38a3e88.jpg",
+                feedback: []
+            },
+            {
+                id: 22,
+                name: "Lays shawarma",
+                category: "shawarma-wraps",
+                price: 199,
+                description: "Delicious Lays chicken shawarma wrapped in a soft tortilla",
+                image: "https://i.pinimg.com/736x/19/5a/fa/195afa7795307a1bfb14d1e3907927a1.jpg",
+                feedback: []
+            },
+            {
+                id: 23,
+                name: "plate shawarma",
+                category: "shawarma-platters",
+                price: 299,
+                description: "Delicious plate shawarma with assorted dips and sides",
+                image: "https://i.pinimg.com/1200x/0d/11/78/0d11781681acdd32737af71464b92f40.jpg",
+                feedback: []
+            },
+            {
+                id: 24,
+                name: "cheese shawarma",
+                category: "shawarma-wraps",
+                price: 299,
+                description: "Delicious cheese shawarma with assorted dips and sides",
+                image: "https://i.pinimg.com/736x/ae/71/aa/ae71aa46fa43cd7f73bddefc3cb480b8.jpg",
+                feedback: []
+            },
+            {
+                id: 25,
+                name: "kaju shawarma",
+                category: "shawarma-wraps",
+                price: 299,
+                description: "Delicious kaju shawarma with assorted dips and sides",
+                image: "https://i.pinimg.com/1200x/aa/4e/11/aa4e118c319b47ed55805147a38bbf27.jpg",
+                feedback: []
+            },
+            {
+                id: 26,
+                name: "pot shawarma",
+                category: "shawarma-wraps",
+                price: 299,
+                description: "Delicious pot shawarma with assorted dips and sides",
+                image: "https://content.jdmagicbox.com/v2/comp/krishna/j7/9999p8676.8676.250529220231.y5j7/catalogue/muntaj-pot-shawarma-krishna-shawarma-centres-gxed9fnnrk.jpg",
                 feedback: []
             }
+            
         ]
     }
 ];
@@ -2527,19 +2542,35 @@ function displayRestaurantMenu(restaurantId) {
             <div class="main-categories">
                 <button class="category-btn active" data-category="veg">Veg Menu</button>
                 <button class="category-btn" data-category="nonveg">Non-Veg Menu</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="shawarma">Shawarma</button>
+                <button class="category-btn" data-category="fastfood">Fast Food</button>
             </div>
             <div class="sub-categories" id="vegSubCategories">
                 <button class="sub-category-btn active" data-subcategory="veg-soups">Soups</button>
                 <button class="sub-category-btn" data-subcategory="veg-starters">Starters</button>
                 <button class="sub-category-btn" data-subcategory="veg-noodles">Noodles</button>
                 <button class="sub-category-btn" data-subcategory="veg-main">Main Course</button>
-                <button class="sub-category-btn" data-subcategory="desserts">Desserts</button>
             </div>
-            <div class="sub-categories" id="nonvegSubCategories" style="display: none;">
+            <div class="sub-categories" id="nonvegSubCategories">
                 <button class="sub-category-btn active" data-subcategory="nonveg-soups">Soups</button>
                 <button class="sub-category-btn" data-subcategory="nonveg-starters">Starters</button>
                 <button class="sub-category-btn" data-subcategory="nonveg-noodles">Noodles</button>
                 <button class="sub-category-btn" data-subcategory="nonveg-main">Main Course</button>
+            </div>
+            <div class="sub-categories" id="shawarmaSubCategories">
+                <button class="sub-category-btn active" data-subcategory="shawarma-wraps">Wraps</button>
+                <button class="sub-category-btn" data-subcategory="shawarma-platters">Platters</button>
+            </div>
+            <div class="sub-categories" id="dessertsSubCategories">
+                <button class="sub-category-btn active" data-subcategory="icecreams">Ice Creams</button>
+                <button class="sub-category-btn" data-subcategory="pastries">Pastries</button>
+
+            </div>
+            <div class="sub-categories" id="fastfoodSubCategories">
+                <button class="sub-category-btn active" data-subcategory="fastfood-burgers">Burgers</button>
+                <button class="sub-category-btn" data-subcategory="fastfood-pizza">Pizza</button>
+                <button class="sub-category-btn" data-subcategory="fastfood-sandwiches">Sandwiches</button>
             </div>
         </div>
         <div class="menu-items" id="menuItems">
@@ -2573,26 +2604,32 @@ function displayRestaurantMenu(restaurantId) {
 
     // Add event listeners for main categories
     const mainCategoryBtns = menuContainer.querySelectorAll('.main-categories .category-btn');
-    mainCategoryBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Update active button
-            mainCategoryBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+mainCategoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Update active button
+        mainCategoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-            // Show/hide sub-categories
-            const category = btn.dataset.category;
-            document.getElementById('vegSubCategories').style.display = category === 'veg' ? 'flex' : 'none';
-            document.getElementById('nonvegSubCategories').style.display = category === 'nonveg' ? 'flex' : 'none';
+        // Hide all sub-category containers
+        const allSubCategories = document.querySelectorAll('.sub-categories');
+        allSubCategories.forEach(container => container.style.display = 'none');
+
+        // Show the selected sub-category container
+        const category = btn.dataset.category;
+        const selectedSubCategoryContainer = document.getElementById(`${category}SubCategories`);
+        if (selectedSubCategoryContainer) {
+            selectedSubCategoryContainer.style.display = 'flex';
 
             // Update active sub-category button
-            const subCategoryBtns = document.querySelectorAll(`#${category}SubCategories .sub-category-btn`);
+            const subCategoryBtns = selectedSubCategoryContainer.querySelectorAll('.sub-category-btn');
             subCategoryBtns.forEach(b => b.classList.remove('active'));
             subCategoryBtns[0].classList.add('active');
 
             // Display items for the first sub-category
             displayMenuItems(subCategoryBtns[0].dataset.subcategory);
-        });
+        }
     });
+});
 
     // Add event listeners for sub-categories
     const subCategoryBtns = menuContainer.querySelectorAll('.sub-category-btn');
@@ -2608,6 +2645,13 @@ function displayRestaurantMenu(restaurantId) {
         });
     });
 
+    
+    // Hide all sub-category containers initially
+const allSubCategories = menuContainer.querySelectorAll('.sub-categories');
+allSubCategories.forEach(container => container.style.display = 'none');
+
+// Show only veg sub-categories on initial load
+document.getElementById('vegSubCategories').style.display = 'flex';
     // Display initial items (Veg soups)
     displayMenuItems('veg-soups');
 }
