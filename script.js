@@ -410,7 +410,7 @@ const restaurants = [
                 category: "veg-soups",
                 price: 130,
                 description: "Creamy sweet corn soup with vegetables",
-                image: "https://i.pinimg.com/736x/5c/99/7e/5c997e64eb005364c25e613b8d9e68e4.jpg",
+                image: "",
                 feedback: []
             },
             {
@@ -455,7 +455,7 @@ const restaurants = [
                 category: "nonveg-starters",
                 price: 299,
                 description: "Half chicken marinated in yogurt and spices, cooked in tandoor",
-                image: "https://i.pinimg.com/736x/28/a9/fe/28a9fee077780e608db1e77685adc36e.jpg",
+                image: "",
                 feedback: []
             },
             {
@@ -482,7 +482,7 @@ const restaurants = [
                 category: "nonveg-starters",
                 price: 299,
                 description: "Minced chicken mixed with spices and grilled on skewers",
-                image: "https://i.pinimg.com/736x/62/fb/b9/62fbb97b4c4ebe60170a2e9d05b8fe16.jpg",
+                image: "",
                 feedback: []
             },
             {
