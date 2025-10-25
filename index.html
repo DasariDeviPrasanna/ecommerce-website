@@ -60,19 +60,24 @@
     <div id="mainContent" class="main-content" style="display: none;">
         <!-- Restaurant Slideshow Section -->
         <section id="home" class="restaurant-slideshow">
-            <div class="slideshow-container">
-                <div class="slideshow-wrapper" style="display: flex; transition: transform 0.5s ease;">
+            <div class="slideshow-container" style="position:relative;">
+                <div class="slideshow-wrapper" role="list" tabindex="0" style="display: flex; transition: transform 0.5s ease;">
                     <!-- Slides will be dynamically added here -->
                 </div>
-                <button class="slideshow-btn prev-btn">
+                <button class="slideshow-btn prev-btn" aria-label="Previous slide">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <button class="slideshow-btn next-btn">
+                <button class="slideshow-btn next-btn" aria-label="Next slide">
                     <i class="fas fa-chevron-right"></i>
                 </button>
-                <div class="slideshow-dots">
-                    <!-- Dots will be dynamically added here -->
+                <button class="slideshow-btn play-pause-btn" style="right:60px; top:10px; position:absolute;" aria-label="Pause slideshow">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <div class="slideshow-dots" aria-hidden="false">
+                    <!-- Dots / thumbnails will be dynamically added here -->
                 </div>
+                <!-- Live region for screen reader announcements (JS will update text) -->
+                <div id="slideshowLiveRegion" aria-live="polite" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"></div>
             </div>
         </section>
 

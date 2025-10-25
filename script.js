@@ -347,7 +347,7 @@ const restaurants = [
                 category: "nonveg-noodles",
                 price: 249,
                 description: "Stir-fried noodles with mixed vegetables and double egg",
-                image: "https://img.freepik.com/free-photo/high-angle-traditional-asian-meal-with-chopsticks_23-2148694371.jpg?ga=GA1.1.904447893.1748708277&semt=ais_hybrid&w=740",
+                image: "https://i.pinimg.com/1200x/0c/8b/1b/0c8b1b8a7aa2ad83d335e279be742125.jpg",
                 feedback: []
             },
             {
@@ -401,7 +401,7 @@ const restaurants = [
                 category: "veg-soups",
                 price: 120,
                 description: "Classic tomato soup with herbs and croutons",
-                image: "",
+                image: "https://i.pinimg.com/1200x/dc/88/5e/dc885e424e2cc36080e3ffaee09b6dfb.jpg",
                 feedback: []
             },
             {
@@ -410,7 +410,7 @@ const restaurants = [
                 category: "veg-soups",
                 price: 130,
                 description: "Creamy sweet corn soup with vegetables",
-                image: "",
+                image: "https://i.pinimg.com/736x/b5/e8/b5/b5e8b546fab8e3a52a6c998c3b20ea27.jpg",
                 feedback: []
             },
             {
@@ -455,7 +455,7 @@ const restaurants = [
                 category: "nonveg-starters",
                 price: 299,
                 description: "Half chicken marinated in yogurt and spices, cooked in tandoor",
-                image: "",
+                image: "https://i.pinimg.com/736x/da/a1/7f/daa17f587f32aedc99009f1f9247e482.jpg",
                 feedback: []
             },
             {
@@ -482,7 +482,7 @@ const restaurants = [
                 category: "nonveg-starters",
                 price: 299,
                 description: "Minced chicken mixed with spices and grilled on skewers",
-                image: "",
+                image: "https://i.pinimg.com/736x/e7/4c/c0/e74cc03037a2727e840327acd8dd0b7a.jpg",
                 feedback: []
             },
             {
@@ -686,7 +686,7 @@ const restaurants = [
             {
                 id: 43,
                 name: "Kunafa",
-                category: "desserts",
+                category: "fusion",
                 price: 149,
                 description: "A Middle Eastern dessert made with shredded phyllo dough, filled with sweet cheese, soaked in sugar syrup, and topped with pistachios",
                 image: "https://i.pinimg.com/736x/6f/1e/bd/6f1ebda74c86d772bec832b38ca4eeb6.jpg",
@@ -695,7 +695,7 @@ const restaurants = [
             {
                 id: 44,
                 name: "Double ka meetha",
-                category: "desserts",
+                category: "fusion",
                 price: 149,
                 description: "A rich Indian bread pudding made with deep-fried bread slices soaked in sweetened milk, flavored with cardamom and garnished with nuts",
                 image: "https://i.pinimg.com/736x/0a/f8/3b/0af83bf1d5d1843a7c83e800916f1998.jpg",
@@ -704,7 +704,7 @@ const restaurants = [
             {
                 id: 45,
                 name: "kaddu ki kheer",
-                category: "desserts",
+                category: "fusion",
                 price: 149,
                 description: "A traditional Indian dessert made with grated pumpkin cooked in milk, sweetened with sugar, and flavored with cardamom and nuts",
                 image: "https://i.pinimg.com/736x/b9/c1/82/b9c18276dbc96cf9fc3599c07ae3c32f.jpg",
@@ -713,7 +713,7 @@ const restaurants = [
             {
                 id: 46,
                 name: "Rasmalai",
-                category: "desserts",
+                category: "milk-based",
                 price: 149,
                 description: "Soft cottage cheese dumplings soaked in sweetened, thickened milk flavored with cardamom and saffron, garnished with pistachios",
                 image: "https://i.pinimg.com/736x/8c/d9/0b/8cd90bf9409d21492701d4cbc03a87e8.jpg",
@@ -1074,7 +1074,7 @@ const restaurants = [
             {
                 id: 39,
                 name: "gulabjamun icecream",
-                category: "ice-creams",
+                category: "icecream",
                 price: 120,
                 description: "Light and clear vegetable soup",
                 image: "https://i.pinimg.com/736x/f6/bd/6e/f6bd6eabb38924687ef4c5daf66f5c14.jpg",
@@ -1083,7 +1083,7 @@ const restaurants = [
             {
                 id: 40,
                 name: "apricot delight",
-                category: "desserts",
+                category: "fusion",
                 price: 120,
                 description: "Light and clear vegetable soup",
                 image: "https://i.pinimg.com/736x/1f/74/30/1f74307eb4a85f19c60c40c0998d1aba.jpg",
@@ -1092,7 +1092,7 @@ const restaurants = [
             {
                 id: 41,
                 name: "kunafa",
-                category: "desserts",
+                category: "fusion",
                 price: 120,
                 description: "Light and clear vegetable soup",
                 image:"https://i.pinimg.com/736x/6f/1e/bd/6f1ebda74c86d772bec832b38ca4eeb6.jpg",
@@ -1101,7 +1101,7 @@ const restaurants = [
             {
                 id: 42,
                 name: "rabadi",
-                category: "desserts",
+                category: "milk-based",
                 price: 120,
                 description: "Light and clear vegetable soup",
                 image: "https://i.pinimg.com/736x/1f/37/48/1f3748e1d2a895d6a16ee9a9d8a66c4f.jpg",
@@ -1110,7 +1110,7 @@ const restaurants = [
             {
                 id: 43,
                 name: "rasmalai",
-                category: "desserts",
+                category: "milk-based",
                 price: 120,
                 description: "Light and clear vegetable soup",
                 image: "https://i.pinimg.com/736x/fd/09/38/fd093848115fc1a2b8140604b92cbac2.jpg",
@@ -1535,7 +1535,7 @@ const restaurants = [
             {
                 id: 46,
                 name:"Gulab Jamun",
-                category: "desserts",
+                category: "fusion",
                 price: 80,
                 description: "Soft and sweet milk-based dumplings",
                 image: "https://i.pinimg.com/736x/71/9a/3e/719a3e079dc7885053736c8be5dc8681.jpg",
@@ -1544,7 +1544,7 @@ const restaurants = [
             {
                 id: 47,
                 name: "Ras Malai",
-                category: "desserts",
+                category: "milk-based",
                 price: 90,
                 description: "Soft cheese dumplings in sweetened milk",
                 image: "https://i.pinimg.com/1200x/dc/e5/52/dce552af6cf31851ac8f487ee8400197.jpg",
@@ -1553,7 +1553,7 @@ const restaurants = [
             {
                 id: 48,
                 name: "Badam Kheer",
-                category: "desserts",
+                category: "milk-based",
                 price: 100,
                 description: "Rice pudding made with milk and sugar,flavored with cardamom and garnished with almonds.",
                 image: "https://i.pinimg.com/736x/2e/82/9a/2e829a3f1a631e4e383e65d33f54e55a.jpg",
@@ -1562,7 +1562,7 @@ const restaurants = [
             {
                 id:49,
                 name: "vanilla ice cream",
-                category: "desserts",
+                category: "icecreams",
                 price: 90,
                 description: "Creamy vanilla ice cream made with real vanilla beans",
                 image: "https://i.pinimg.com/736x/17/58/8b/17588bde404baa370330128f97c79b2f.jpg",
@@ -1571,7 +1571,7 @@ const restaurants = [
             {
                 id: 50,
                 name: "ButterScotch ice cream",
-                category: "desserts",
+                category: "icecreams",
                 price: 120,
                 description: "Rich butter scotch ice cream with a creamy texture",
                 image: "https://i.pinimg.com/1200x/03/8a/34/038a347d79698515c60eba741b5806ec.jpg",
@@ -2565,6 +2565,8 @@ function displayRestaurantMenu(restaurantId) {
             <div class="sub-categories" id="dessertsSubCategories">
                 <button class="sub-category-btn active" data-subcategory="icecreams">Ice Creams</button>
                 <button class="sub-category-btn" data-subcategory="pastries">Pastries</button>
+                <button class="sub-category-btn" data-subcategory="fusion">Fusion Desserts</button>
+                <button class="sub-category-btn" data-subcategory="milk-based">Milk Based Desserts</button>
 
             </div>
             <div class="sub-categories" id="fastfoodSubCategories">
